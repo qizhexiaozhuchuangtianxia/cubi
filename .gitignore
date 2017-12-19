@@ -1,0 +1,15 @@
+# mac os x
+.DS_Store
+
+# node 
+node_modules/
+
+# dist
+dist/
+
+# eslint
+.eslintcache
+
+# proj
+.bak
+.xmark.README.md.html

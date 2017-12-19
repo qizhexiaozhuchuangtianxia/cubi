@@ -1,0 +1,135 @@
+/**
+ * start 右上角异步下载模块的样式代码
+ */
+ .newsButtonBox{
+ 	width: 24px;
+ 	height: 24px;
+ 	position: relative;
+	margin-top: 14px;
+	margin-left: 16px;
+ 	&>button{
+ 		width: 24px!important;
+ 		height: 24px!important;
+ 		padding:0!important;
+ 		.newsButtonIcon{
+ 			
+ 		}
+ 	}
+ 	.newsTip{
+		width: 8px;
+		height: 8px;
+		background-color: #00e5ff;
+		border-radius: 50%;
+		position: absolute;
+		right: -1px;
+		top: -1px;
+		z-index: 10000;
+ 	}
+ }
+ 
+.downLoadDialog{
+	width: 354px!important;
+	height: 368px;
+	position: absolute!important;
+	right: 16px;
+	top: 24px;
+	z-index: 9000!important;
+	&>div{
+		width: 100%;
+		height: 100%;
+		position: relative!important;
+		.downLoadDialogTitle{
+			width: 100%;
+			height: 64px;
+			line-height: 64px!important;
+			background-color: #37474f;
+			padding: 0 0 0 24px !important;
+			font-size: 16px!important;
+			font-weight: normal!important;
+			color: #fff;
+		}
+		.downLoadDialogBody{
+			width: 100%;
+			height: 296px;
+			padding: 0!important;
+			background-color: #455a64;
+			position: relative;
+			max-height: none!important;
+			.downLoadListMessage{
+				width: 90px;
+				height: 20px;
+				left: 0;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				position: absolute;
+				font-size: 14px;
+				color: #fff;
+			}
+			.scrollBox{
+				width: 100%;
+				height: 100%;
+			}
+			.listClassName{
+				height: 100%;
+				padding: 0!important;
+				margin-top: 8px!important;
+				.downLoadItemList{
+					&>div>div>span{
+						width: auto!important;
+						height: auto!important;
+						padding: 0!important;
+						font-size: 24px!important;
+						top: 30px!important;
+						color: #fff!important;
+					}
+					.downLoadLeftIcon{
+						left: 24px!important;
+					}
+					.downLoadRightIcon{
+						right: 24px!important;
+					}
+					.noClick{
+						color:rgba(255,255,255,.2)!important;
+						cursor: default!important;
+					}
+					&>div>div>:nth-child(3){
+						font-size: 14px!important;
+						color: rgba(255,255,255,.87)!important;
+					}
+					&>div>div>:nth-child(4){
+						font-size: 12px!important;
+						color: rgba(255,255,255,.54)!important;
+					}
+					&:hover{
+						background-color: #41535c!important;
+					}
+				}
+			}
+		}
+		.downLoadDialogAction{
+			width: 88px!important;
+			height: 36px;
+			top: 14px;
+			right: 8px;
+			position: absolute;
+			margin: 0!important;
+			padding: 0!important;
+		}
+	}
+}
+.addMessagesBox{
+	width: 24px;
+	height: 24px;
+	z-index: 10000;
+	&>div{
+		width: 24px;
+		height: 24px;
+		color: #00e5ff;
+		font-size: 24px;
+	}
+}
+  /**
+ * end 右上角异步下载模块的样式代码
+ */

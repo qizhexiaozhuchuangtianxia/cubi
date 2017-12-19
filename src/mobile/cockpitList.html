@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <title>驾驶舱列表页面</title>
+    <link href="libs/materialize/css/icon.css" rel="stylesheet">
+    <link href="libs/materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link href="css/comment.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+<body>
+<div class="layout">
+    <div class="dashboard-main-list">
+        <div id="slide-out" class="side-nav side-nav-list">
+            <div class="slider-left-top">
+                <dl>
+                    <dt><img src="images/logo.svg"></dt>
+                    <dd id="userNameBox"></dd>
+                </dl>
+            </div>
+            <div class="collection no-border slider-list">
+                <a href="cockpitList.html" class="waves-effect waves-light collection-item jsc-icon">驾驶舱</a>
+                <a href="javascript:;" id="quit" class="waves-effect waves-light collection-item quit-login-icon">退出登录</a>
+            </div>
+        </div>
+        <div class="dashboard-top">
+            <div class="iconBox menuIcon left">
+                <a href="javascript:;" data-activates="slide-out"></a>
+            </div>
+            <div class="showSelect" id="showSelect">全部</div>
+        </div>
+        <div class="dashboard-down" id="dashboard-down">
+            <div class="scrollRefresh">
+                <ul class="collection no-border" id="listHtml">
+                    <div class="loading">
+                        <div class="loadingLogo"></div>
+                        <div class="progress"><div class="indeterminate"></div></div>
+                    </div>
+                </ul>
+                <div class="spinner" id="spinner"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="libs/jQuery-2.11/jquery-2.1.1.min.js"></script>
+<script src="libs/materialize/js/materialize.min.js"></script>
+<script src="libs/iscroll/iscroll.js"></script>
+<script src="libs/iscroll/iscroll-probe.js"></script>
+<script src="js/biComment.js"></script>
+<script src="js/listPageJs.js"></script>

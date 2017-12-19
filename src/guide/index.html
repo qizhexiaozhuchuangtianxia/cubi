@@ -1,0 +1,709 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>quickstart.md</title><link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css'><style type='text/css'>html, body {overflow-x: initial !important;}.CodeMirror { height: auto; }
+.CodeMirror-scroll { overflow-y: hidden; overflow-x: auto; }
+.CodeMirror-lines { padding: 4px 0px; }
+.CodeMirror pre { }
+.CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { background-color: white; }
+.CodeMirror-gutters { border-right-width: 1px; border-right-style: solid; border-right-color: rgb(221, 221, 221); background-color: rgb(247, 247, 247); white-space: nowrap; }
+.CodeMirror-linenumbers { }
+.CodeMirror-linenumber { padding: 0px 3px 0px 5px; text-align: right; color: rgb(153, 153, 153); }
+.CodeMirror div.CodeMirror-cursor { border-left-width: 1px; border-left-style: solid; border-left-color: black; z-index: 3; }
+.CodeMirror div.CodeMirror-secondarycursor { border-left-width: 1px; border-left-style: solid; border-left-color: silver; }
+.CodeMirror.cm-keymap-fat-cursor div.CodeMirror-cursor { width: auto; border: 0px; background-color: rgb(119, 238, 119); z-index: 1; background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror div.CodeMirror-cursor.CodeMirror-overwrite { }
+.cm-tab { display: inline-block; }
+.cm-s-typora-default .cm-header, .cm-s-typora-default .cm-property { color: rgb(217, 79, 138); }
+.cm-s-typora-default pre.cm-header1:not(.cm-atom) :not(.cm-overlay) { font-size: 2rem; line-height: 2rem; }
+.cm-s-typora-default pre.cm-header2:not(.cm-atom) :not(.cm-overlay) { font-size: 1.4rem; line-height: 1.4rem; }
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number { color: rgb(149, 132, 134); }
+.cm-s-typora-default .cm-table-row, .cm-s-typora-default .cm-block-start { font-family: monospace; }
+.cm-s-typora-default .cm-comment, .cm-s-typora-default .cm-code { color: rgb(74, 90, 159); font-family: monospace; }
+.cm-s-typora-default .cm-tag { color: rgb(169, 68, 66); }
+.cm-s-typora-default .cm-string { color: rgb(126, 134, 169); }
+.cm-s-typora-default .cm-link { color: rgb(196, 122, 15); text-decoration: underline; }
+.cm-s-typora-default .cm-variable-2, .cm-s-typora-default .cm-variable-1 { color: inherit; }
+.cm-s-typora-default .cm-overlay { font-size: 1rem; font-family: monospace; }
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor { border-left-width: 3px; border-left-style: solid; border-left-color: rgb(228, 98, 154); }
+.cm-s-typora-default .CodeMirror-activeline-background { left: -60px; right: -30px; background-color: rgba(204, 204, 204, 0.2); background-position: initial initial; background-repeat: initial initial; }
+.cm-s-typora-default .CodeMirror-gutters { border-right-style: none; background-color: inherit; }
+.cm-s-typora-default .cm-trailing-space-new-line::after, .cm-startspace::after, .cm-starttab .cm-tab::after { content: '•'; position: absolute; left: 0px; opacity: 0; font-family: LetterGothicStd, monospace; }
+.os-windows .cm-startspace::after, .os-windows .cm-starttab .cm-tab::after { left: -0.1em; }
+.cm-starttab .cm-tab::after { content: ' '; }
+.cm-startspace, .cm-tab, .cm-starttab, .cm-trailing-space-a, .cm-trailing-space-b, .cm-trailing-space-new-line { font-family: monospace; position: relative; }
+.cm-s-typora-default .cm-trailing-space-new-line::after { content: '↓'; opacity: 0.3; }
+.cm-s-inner .cm-keyword { color: rgb(119, 0, 136); }
+.cm-s-inner .cm-atom, .cm-s-inner.cm-atom { color: rgb(34, 17, 153); }
+.cm-s-inner .cm-number { color: rgb(17, 102, 68); }
+.cm-s-inner .cm-def { color: rgb(0, 0, 255); }
+.cm-s-inner .cm-variable { color: black; }
+.cm-s-inner .cm-variable-2 { color: rgb(0, 85, 170); }
+.cm-s-inner .cm-variable-3 { color: rgb(0, 136, 85); }
+.cm-s-inner .cm-property { color: black; }
+.cm-s-inner .cm-operator { color: rgb(152, 26, 26); }
+.cm-s-inner .cm-comment, .cm-s-inner.cm-comment { color: rgb(170, 85, 0); }
+.cm-s-inner .cm-string { color: rgb(170, 17, 17); }
+.cm-s-inner .cm-string-2 { color: rgb(255, 85, 0); }
+.cm-s-inner .cm-meta { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-qualifier { color: rgb(85, 85, 85); }
+.cm-s-inner .cm-builtin { color: rgb(51, 0, 170); }
+.cm-s-inner .cm-bracket { color: rgb(153, 153, 119); }
+.cm-s-inner .cm-tag { color: rgb(17, 119, 0); }
+.cm-s-inner .cm-attribute { color: rgb(0, 0, 204); }
+.cm-s-inner .cm-header, .cm-s-inner.cm-header { color: blue; }
+.cm-s-inner .cm-quote, .cm-s-inner.cm-quote { color: rgb(0, 153, 0); }
+.cm-s-inner .cm-hr, .cm-s-inner.cm-hr { color: rgb(153, 153, 153); }
+.cm-s-inner .cm-link, .cm-s-inner.cm-link { color: rgb(0, 0, 204); }
+.cm-negative { color: rgb(221, 68, 68); }
+.cm-positive { color: rgb(34, 153, 34); }
+.cm-header, .cm-strong { font-weight: bold; }
+.cm-del { text-decoration: line-through; }
+.cm-em { font-style: italic; }
+.cm-link { text-decoration: underline; }
+.cm-error { color: rgb(255, 0, 0); }
+.cm-invalidchar { color: rgb(255, 0, 0); }
+.cm-constant { color: rgb(38, 139, 210); }
+.cm-defined { color: rgb(181, 137, 0); }
+div.CodeMirror span.CodeMirror-matchingbracket { color: rgb(0, 255, 0); }
+div.CodeMirror span.CodeMirror-nonmatchingbracket { color: rgb(255, 34, 34); }
+.cm-s-inner .CodeMirror-activeline-background { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+.CodeMirror { position: relative; overflow: hidden; }
+.CodeMirror-scroll { margin-bottom: -30px; margin-right: -30px; padding-bottom: 30px; padding-right: 30px; height: 100%; outline: none; position: relative; box-sizing: content-box; }
+.CodeMirror-sizer { position: relative; }
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, .CodeMirror-scrollbar-filler, .CodeMirror-gutter-filler { position: absolute; z-index: 6; display: none; }
+.CodeMirror-vscrollbar { right: 0px; top: 0px; overflow-x: hidden; overflow-y: scroll; }
+.CodeMirror-hscrollbar { bottom: 0px; left: 0px; overflow-y: hidden; overflow-x: scroll; }
+.CodeMirror-scrollbar-filler { right: 0px; bottom: 0px; }
+.CodeMirror-gutter-filler { left: 0px; bottom: 0px; }
+.CodeMirror-gutters { position: absolute; left: 0px; top: 0px; padding-bottom: 30px; z-index: 3; }
+.CodeMirror-gutter { white-space: normal; height: 100%; box-sizing: content-box; padding-bottom: 30px; margin-bottom: -32px; display: inline-block; }
+.CodeMirror-gutter-elt { position: absolute; cursor: default; z-index: 4; }
+.CodeMirror-lines { cursor: text; }
+.CodeMirror pre { border-top-left-radius: 0px; border-top-right-radius: 0px; border-bottom-right-radius: 0px; border-bottom-left-radius: 0px; border-width: 0px; background-color: transparent; font-family: inherit; font-size: inherit; margin: 0px; white-space: pre; word-wrap: normal; color: inherit; z-index: 2; position: relative; overflow: visible; background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror-wrap pre { word-wrap: break-word; white-space: pre-wrap; word-break: normal; }
+.CodeMirror-code pre { border-right-width: 30px; border-right-style: solid; border-right-color: transparent; width: -webkit-fit-content; }
+.CodeMirror-wrap .CodeMirror-code pre { border-right-style: none; width: auto; }
+.CodeMirror-linebackground { position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; z-index: 0; }
+.CodeMirror-linewidget { position: relative; z-index: 2; overflow: auto; }
+.CodeMirror-widget { }
+.CodeMirror-wrap .CodeMirror-scroll { overflow-x: hidden; }
+.CodeMirror-measure { position: absolute; width: 100%; height: 0px; overflow: hidden; visibility: hidden; }
+.CodeMirror-measure pre { position: static; }
+.CodeMirror div.CodeMirror-cursor { position: absolute; visibility: hidden; border-right-style: none; width: 0px; }
+.CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+.CodeMirror-focused div.CodeMirror-cursor { visibility: inherit; }
+.CodeMirror-selected { background-color: rgb(217, 217, 217); background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror-focused .CodeMirror-selected { background-color: rgb(215, 212, 240); background-position: initial initial; background-repeat: initial initial; }
+.cm-searching { background-color: rgba(255, 255, 0, 0.4); background-position: initial initial; background-repeat: initial initial; }
+.CodeMirror span { }
+@media print { 
+  .CodeMirror div.CodeMirror-cursor { visibility: hidden; }
+}
+.CodeMirror-lint-markers { width: 16px; }
+.CodeMirror-lint-tooltip { background-color: infobackground; border: 1px solid black; border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; color: infotext; font-family: monospace; overflow: hidden; padding: 2px 5px; position: fixed; white-space: pre-wrap; z-index: 10000; max-width: 600px; opacity: 0; transition: opacity 0.4s; font-size: 0.8em; }
+.CodeMirror-lint-mark-error, .CodeMirror-lint-mark-warning { background-position: left bottom; background-repeat: repeat no-repeat; }
+.CodeMirror-lint-mark-error { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAADCAYAAAC09K7GAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9sJDw4cOCW1/KIAAAAZdEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIEdJTVBXgQ4XAAAAHElEQVQI12NggIL/DAz/GdA5/xkY/qPKMDAwAADLZwf5rvm+LQAAAABJRU5ErkJggg==); }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-marker-warning { cursor: pointer; display: inline-block; height: 16px; width: 16px; vertical-align: middle; position: relative; background-position: center center; background-repeat: no-repeat no-repeat; }
+.CodeMirror-lint-message-error, .CodeMirror-lint-message-warning { padding-left: 18px; background-position: left top; background-repeat: no-repeat no-repeat; }
+.CodeMirror-lint-marker-error, .CodeMirror-lint-message-error { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEW7AAC7AACxAAC7AAC7AAAAAAC4AAC5AAD///+7AAAUdclpAAAABnRSTlMXnORSiwCK0ZKSAAAATUlEQVR42mWPOQ7AQAgDuQLx/z8csYRmPRIFIwRGnosRrpamvkKi0FTIiMASR3hhKW+hAN6/tIWhu9PDWiTGNEkTtIOucA5Oyr9ckPgAWm0GPBog6v4AAAAASUVORK5CYII=); }
+.CodeMirror-lint-marker-warning, .CodeMirror-lint-message-warning { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEX/uwDvrwD/uwD/uwD/uwD/uwD/uwD/uwD/uwD6twD/uwAAAADurwD2tQD7uAD+ugAAAAD/uwDhmeTRAAAADHRSTlMJ8mN1EYcbmiixgACm7WbuAAAAVklEQVR42n3PUQqAIBBFUU1LLc3u/jdbOJoW1P08DA9Gba8+YWJ6gNJoNYIBzAA2chBth5kLmG9YUoG0NHAUwFXwO9LuBQL1giCQb8gC9Oro2vp5rncCIY8L8uEx5ZkAAAAASUVORK5CYII=); }
+.CodeMirror-lint-marker-multiple { background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAAHCAMAAADzjKfhAAAACVBMVEUAAAAAAAC/v7914kyHAAAAAXRSTlMAQObYZgAAACNJREFUeNo1ioEJAAAIwmz/H90iFFSGJgFMe3gaLZ0od+9/AQZ0ADosbYraAAAAAElFTkSuQmCC); width: 100%; height: 100%; background-position: right bottom; background-repeat: no-repeat no-repeat; }
+
+
+html { font-size: 14px; background-color: rgb(255, 255, 255); color: rgb(51, 51, 51); }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit inherit; background-repeat: inherit inherit; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { background-color: rgb(181, 214, 252); text-shadow: none; background-position: initial initial; background-repeat: initial initial; }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; padding-bottom: 70px; white-space: pre-wrap;  }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+/*.typora-export #write { margin: 0px auto; }*/
+#write > p:first-child, #write > ul:first-child, #write > ol:first-child, #write > pre:first-child, #write > blockquote:first-child, #write > div:first-child, #write > table:first-child { margin-top: 30px; }
+#write li > table:first-child { margin-top: -20px; }
+img { max-width: 100%; vertical-align: middle; }
+input, button, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+::before, ::after, * { box-sizing: border-box; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write div, #write pre { width: inherit; }
+#write p, #write h1, #write h2, #write h3, #write h4, #write h5, #write h6 { position: relative; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+p { -webkit-margin-before: 1rem; -webkit-margin-after: 1rem; -webkit-margin-start: 0px; -webkit-margin-end: 0px; }
+.mathjax-block { margin-top: 0px; margin-bottom: 0px; -webkit-margin-before: 0rem; -webkit-margin-after: 0rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: bold; font-style: italic; }
+a { cursor: pointer; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; margin: 4px 0px 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 80px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+pre { white-space: pre-wrap; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit inherit; background-repeat: inherit inherit; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+.md-fences .CodeMirror.CodeMirror-wrap { top: -1.6em; margin-bottom: -1.6em; }
+.md-fences.mock-cm { white-space: pre-wrap; }
+.show-fences-line-number .md-fences { padding-left: 0px; }
+.show-fences-line-number .md-fences.mock-cm { padding-left: 40px; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; padding-top: 1em; padding-bottom: 1em; }
+.footnotes + .footnotes { margin-top: -1em; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background-color: transparent; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: normal; text-align: left; box-sizing: content-box; direction: ltr; background-position: initial initial; background-repeat: initial initial; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li p, li .mathjax-block { margin: 0.5rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; }
+@media print { 
+  html, body { height: 100%; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  h1, h2, h3, h4, h5, h6 { break-after: avoid-page; orphans: 2; }
+  p { orphans: 4; }
+  html.blink-to-pdf { font-size: 13px; }
+  .typora-export #write { padding-left: 1cm; padding-right: 1cm; }
+  .typora-export #write::after { height: 0px; }
+  @page { margin: 20mm 0mm; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 2.86rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; background-position: initial initial; background-repeat: initial initial; }
+p .md-image:only-child { display: inline-block; width: 100%; text-align: center; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.mathjax-block { white-space: pre; overflow: hidden; width: 100%; }
+p + .mathjax-block { margin-top: -1.143rem; }
+.mathjax-block:not(:empty)::after { display: none; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus { outline: none; box-shadow: none; }
+.task-list { list-style-type: none; }
+.task-list-item { position: relative; padding-left: 1em; }
+.task-list-item input { position: absolute; top: 0px; left: 0px; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc::after, .md-toc-content::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); text-decoration: none; }
+.md-toc-inner:hover { }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: bold; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: '.'; }
+.md-tag { opacity: 0.5; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: monospace; }
+code { text-align: left; }
+h1 .md-tag, h2 .md-tag, h3 .md-tag, h4 .md-tag, h5 .md-tag, h6 .md-tag { font-weight: initial; opacity: 0.35; }
+a.md-print-anchor { border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: none !important; background-color: transparent !important; text-shadow: initial !important; background-position: initial initial !important; background-repeat: initial initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.mathjax-block .MathJax_SVG_Display { text-align: center; margin: 1em 0em; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: monospace; }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: normal; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none; }
+
+
+@include-when-export url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/**
+ * css forked from https://github.com/GitbookIO/gitbook 
+ * www.gitbook.com
+ * Apache License
+ * https://github.com/GitbookIO/gitbook/blob/master/LICENSE
+ **/
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-style: italic;
+    font-weight: bold;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write{
+    max-width: 860px;
+  	padding: 20px 30px 40px 30px;
+	padding-top: 20px;
+    padding-bottom: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color: #000;
+    background: #fff;
+     
+}
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    /*background: url("file:///Users/rynax/Library/Application%20Support/images/modules/styleguide/para.png") no-repeat 10px center;*/
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    padding-bottom: .3em;
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+   padding-bottom: .3em;
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 4px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+    border-bottom: 1px solid #ddd;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dddddd;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n) {
+    background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #ddd;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 0.2em 1em;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+.task-list{
+	padding-left: 0;
+}
+
+.task-list-item {
+	padding-left:32px;
+}
+
+.task-list-item input {
+  top: 3px;
+  left: 8px;
+}
+
+@media screen and (min-width: 914px) {
+    /*body {
+        width: 854px;
+        margin: 0 auto;
+    }*/
+}
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    font-family: Consolas, "Liberation Mono", Courier, monospace;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag{
+	color: inherit;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+/** 左侧目录 */
+.lefe-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow-y: auto;
+    height:100%;
+    width: 300px;
+    color: #364149;
+    font-size: 14px;
+    background: #fafafa;
+    border-right: 1px solid rgba(0,0,0,.07);
+    -webkit-transition: left 250ms ease;
+    -moz-transition: left 250ms ease;
+    -o-transition: left 250ms ease;
+    transition: left 250ms ease;
+}
+.lefe-nav p{height: 25px; line-height: 25px; }
+.lefe-nav p:nth-child(1){	margin: 5px 0 0 10px !important;}
+.lefe-nav p:nth-child(2){	margin: 0 0 0 30px !important;}
+.lefe-nav ul { list-style: none;margin-top: 5px !important;padding-left: 0 !important;}
+.lefe-nav ul li{ height: 30px; line-height: 30px;}
+.lefe-nav ul li a{ margin-left: 40px;color: #364149;text-decoration: none;} 
+.lefe-nav ul li a:hover{font-weight: bold;}
+.lefe-nav ul li .guide{margin-left: 10px !important} 
+.lefe-nav ul li .title{margin-left: 30px !important} 
+.lefe-nav ul li a .child-title{ margin-left: 10px;}
+@media (min-width: 600px){
+	  .typora-export #write {
+	  	 left: 300px;
+	  }
+   
+}
+
+
+</style>
+</head>
+<body class='typora-export' >
+<div class="lefe-nav">
+		<ul>
+			<li ><a href="#" class="guide"><span>快速指南</span></a></li>
+			<li ><a href="#" class="title"><span>导言</span></a></li>
+			<li ><a href="#analysis1st" class="title"><span>建立您的第一个分析</span></a></li>
+			<li ><a href="#creat-analysisFile">创建分析文件夹</a></li>
+			<li ><a href="#set-analysis-qx">设定文件夹权限</a></li>
+			<li ><a href="#creat-analysis">在文件夹中新建分析</a></li>
+			<li ><a href="#open-lifang">打开立方</a></li>
+			<li ><a href="#set-analysis-name">设定分析名称</a></li>
+			<li ><a href="#checked-graph-type">选择图形类型</a></li>
+			<li ><a href="#add-weidu-zhibiao">添加维度及指标</a></li>
+			<li ><a href="#graph-drill">图形的钻取</a></li>
+			<li ><a href="#filter-data">通过维度筛选数据</a></li>
+			<li ><a href="#filter-zhibiao-data">通过指标筛选数据</a></li>
+			<li ><a href="#filter-zhibiao-setIDrawer"><span class="child-title" >通过指标筛选柱状图<span></a></li>
+			<li ><a href="#filter-zhibiao-table"><span class="child-title">通过指标筛选表格<span></a></li>
+			<li ><a href="#show-table-huizong">显示表格汇总信息</a></li>
+			<li ><a href="#add-fx">添加计算列</a></li>
+			<li ><a href="#save-analysis">保存分析</a></li>
+			<li ><a href="#saveas-analysis">另存分析</a></li>
+			<li ><a href="#cockpit1st" class="title"><span>创建一个可互动的驾驶舱</span></a></li>
+			<li ><a href="#creat-cockpitFile">创建驾驶舱文件夹</a></li>
+			<li ><a href="#creat-cockpit">创建驾驶舱</a></li>
+			<li ><a href="#add-text">添加富文本</a></li>
+			<li ><a href="#add-analysis">添加分析</a></li>
+			<li ><a href="#adjust-table-size">调整单元格大小</a></li>
+			
+		</ul>
+</div> 
+<div  id='write'  class = 'is-mac'><h1><a name='header-c2089' class='md-header-anchor '></a>快速指南</h1><h2><a name='header-c2090' class='md-header-anchor '></a>导言</h2><p>通过本文可以快速指导您建立一个自己的分析以及包含此分析的驾驶舱。如果希望深入了解瑞雪分析云的所有功能，请您查阅产品手册。</p><p><em>注：本文默认您已经登录了系统，如果您有登录方面的问题请联系我们。</em></p><p></p><h2 id='analysis1st'><a name='header-c2097' href="" class='md-header-anchor '></a>建立您的第一个分析</h2><p>在本章节中将引导您一步一步的创建您的第一个分析。</p><p></p><h3 id='creat-analysisFile'><a name='header-c2102' class='md-header-anchor '></a>创建分析文件夹</h3><ol start='' ><li><p>进入系统后首先点击左上角的菜单按钮呼出左侧菜单</p><p><img src='images/B4F6C2D7-89E3-4F7B-9D06-16F3B33D0C4B.png' alt='B4F6C2D7-89E3-4F7B-9D06-16F3B33D0C4B' /></p><p>​</p></li><li><p>呼出左侧菜单，点击<strong>我的分析</strong></p><p><img src='images/ED46F56D-518A-4F61-B85C-8551D4B0D881.png' alt='ED46F56D-518A-4F61-B85C-8551D4B0D881' /></p><p>​</p></li><li><p>点击右上角蓝色的加号（+），在弹出的图标中选择文件夹图标</p><p><img src='images/074C39E7-E50D-4071-A1C4-9A7175431D0B.png' alt='074C39E7-E50D-4071-A1C4-9A7175431D0B' /></p><p>​</p></li><li><p>输入文件夹名称<strong>&lt;您的名字&gt;的分析</strong>，并点击<strong>创建</strong>。</p><p><img src='images/6FFE2C57-4CD6-4921-8449-259612741114.png' alt='6FFE2C57-4CD6-4921-8449-259612741114' /></p><p>​</p></li><li><p>这样您的文件夹就创建好了。</p><p><img src='images/B0554527-45B5-4D7F-B8D1-7F3FE246044D.png' alt='B0554527-45B5-4D7F-B8D1-7F3FE246044D' /></p><p>​</p></li></ol><h3 id='set-analysis-qx'><a name='header-c2139' class='md-header-anchor '></a>设定文件夹权限</h3><p>通过以下步骤可以使<strong>开发团队</strong>群组读取此文件夹，欲了解更多关于群组的内容请参考产品手册。</p><ol start='' ><li><p>勾选刚刚建立的文件夹</p><p><img src='images/5D530076-FE5A-49E8-9826-99E5EF1493EB.png' alt='5D530076-FE5A-49E8-9826-99E5EF1493EB' /></p><p>​</p></li></ol><ol start='2' ><li><p>点击右上角的权限设定按钮<img src='images/53A7A6A8-5A2C-4225-A2FE-AE943DEA181A.png' alt='53A7A6A8-5A2C-4225-A2FE-AE943DEA181A' /></p><p><img src='images/C13B730D-5FE5-4A9A-A235-FABEEB987C90.png' alt='C13B730D-5FE5-4A9A-A235-FABEEB987C90' /></p><p>​</p></li><li><p>添加<strong>开发团队</strong>分组</p><p><img src='images/8CBE36F9-195F-4364-939C-ED1FA5E1CA5F.png' alt='8CBE36F9-195F-4364-939C-ED1FA5E1CA5F' /></p><p><img src='images/0E4BA0F8-7F72-4991-A6BA-E78D37F6D0BE.png' alt='0E4BA0F8-7F72-4991-A6BA-E78D37F6D0BE' /></p><p><img src='images/05685EA7-709B-4F29-90A4-94EEBAF60BAC.png' alt='05685EA7-709B-4F29-90A4-94EEBAF60BAC' /></p><p>​</p></li><li><p>点击开发团队右侧的展开按钮，并勾选<strong>可读</strong></p><p><img src='images/4BF2C314-574E-491F-9950-C52FB66F6980.png' alt='4BF2C314-574E-491F-9950-C52FB66F6980' /></p><p>​</p></li><li><p>点击屏幕中间收起右侧面板</p><p><img src='images/9BD63C72-03A5-46F1-BD4C-C08246001288.png' alt='9BD63C72-03A5-46F1-BD4C-C08246001288' /></p><p>​</p></li></ol><h3 id='creat-analysis'><a name='header-c2184' class='md-header-anchor '></a>在文件夹中新建分析</h3><p>通过以下步骤可以在刚刚新建的文件夹中创建您的分析。</p><ol start='' ><li><p>点击刚刚创建的文件夹。</p><p><em>注：点击文件夹名称的文字进入文件夹</em></p><p>​</p></li><li><p>确认屏幕上方的路径正确
+<em>正确示例：我的分析&gt;张三的分析</em></p><p><img src='images/723ABFBF-2018-4269-8C06-EB72BCBB64AE.png' alt='723ABFBF-2018-4269-8C06-EB72BCBB64AE' /></p><p>​</p></li><li><p>点击右上角的蓝色圆形加号并在弹出的图标中选择分析图标</p><p><img src='images/316C60F8-1FD5-4798-847C-085DA4EF2C42.png' alt='316C60F8-1FD5-4798-847C-085DA4EF2C42' /></p><p><img src='images/980725FC-0AB2-4831-B0C5-26FA1F9403B9.png' alt='980725FC-0AB2-4831-B0C5-26FA1F9403B9' /></p><p>​</p></li></ol><h3 id='open-lifang'><a name='header-c2213' class='md-header-anchor '></a>打开立方</h3><ol start='' ><li><p>点击右上角的蓝色圆形立方按钮</p><p><img src='images/980725FC-0AB2-4831-B0C5-26FA1F9403B9.png' alt='980725FC-0AB2-4831-B0C5-26FA1F9403B9' /></p><p><img src='images/F4398664-8D2A-4684-87EC-FA9BED5DBF8C.png' alt='F4398664-8D2A-4684-87EC-FA9BED5DBF8C' /></p></li></ol><p></p><ol start='2' ><li><p>点击复合维度立方，在立方详情面板里点击<strong>使用立方</strong>按钮。</p><p><img src='images/E62DAFDC-87BA-43C3-96C8-0B20901F2D40.png' alt='E62DAFDC-87BA-43C3-96C8-0B20901F2D40' /></p><p>​</p></li></ol><ol start='3' ><li><p>屏幕下方出现三个圆形按钮说明立方已经正确打开。</p><p><img src='images/5FAE4569-AF72-4290-8EAE-A5B0FDA0F7A2.png' alt='5FAE4569-AF72-4290-8EAE-A5B0FDA0F7A2' /></p><p>​</p></li></ol><h3 id='set-analysis-name'><a name='header-c2242' class='md-header-anchor '></a>设定分析名称</h3><p>您可以通过以下步骤给您的分析起一个易于理解的名字。</p><ol start='' ><li><p>点击下方最右侧的铅笔形状的按钮。</p></li><li><p>在弹出的面板中输入<strong>区域销售情况汇总</strong></p><p><img src='images/123EE276-53EF-49A3-868D-3EBF59097D27.png' alt='123EE276-53EF-49A3-868D-3EBF59097D27' /></p><p>​</p></li></ol><h3 id='checked-graph-type'><a name='header-c2257' class='md-header-anchor '></a>选择图形类型</h3><p>瑞雪分析云支持多种图形及表格形式，可以通过以下步骤设定分析的类型。</p><ol start='' ><li>点击下方最右的铅笔型圆形按钮</li></ol><ol start='2' ><li><p>在弹出的面板中选择柱状图</p><p><img src='images/A76A5CD2-FC49-4536-B539-5E5D6D75D13E.png' alt='A76A5CD2-FC49-4536-B539-5E5D6D75D13E' /></p><p>​</p></li></ol><ol start='3' ><li><p>点击屏幕中心收起面板</p><p>​</p></li></ol><h3 id='add-weidu-zhibiao'><a name='header-c2280'   class='md-header-anchor '></a>添加维度及指标</h3><p>现在您可以添加需要的维度和指标来进行分析了。</p><ol start='' ><li><p>点击下方最左侧的蓝色维度/指标圆形按钮</p><p><img src='images/EA9C1A65-742B-4938-BF64-42C4F121754D.png' alt='EA9C1A65-742B-4938-BF64-42C4F121754D' /></p><p>​</p></li></ol><ol start='2' ><li><p>弹出下面的面板</p><p><img src='images/E621167E-1ADD-4105-9D48-0B3DCC167BCC.png' alt='E621167E-1ADD-4105-9D48-0B3DCC167BCC' /></p><p>​</p></li></ol><ol start='3' ><li><p>通过拖入<strong>sales(求和)</strong> 到<strong>已选指标</strong>中进行指标选择</p><p><img src='images/4610467D-F38D-4408-B29B-54FCE0C365E0.png' alt='4610467D-F38D-4408-B29B-54FCE0C365E0' /></p><p>​</p></li></ol><ol start='4' ><li><p>拖入<strong>行政区域</strong>维度到已选维度中，并在弹出的框中选择<strong>行政区域：省</strong></p><p><em>注：行政区域是一个具有上下级关系的树形维度，欲了解更多关于树形维度的内容请参考产品手册</em></p><p><img src='images/E48DFCB3-DB81-452F-AFCB-7CF97DE5A4CD.png' alt='E48DFCB3-DB81-452F-AFCB-7CF97DE5A4CD' /></p><p><img src='images/635DF2A8-DF96-4125-A9A5-E204AB73F61C.png' alt='635DF2A8-DF96-4125-A9A5-E204AB73F61C' />
+这时您已经得到了一张全国所有省的销售总额的柱状图，现在您可以再添加一个销售平均值到图形中。</p><p>​</p></li></ol><ol start='5' ><li><p>点击指标菜单选择<strong>平均指标</strong></p><p><img src='images/7219EB03-4F4C-460A-AB73-E8B9818078F1.png' alt='7219EB03-4F4C-460A-AB73-E8B9818078F1' /></p><p>​</p></li></ol><ol start='6' ><li><p>拖入<strong>sales(平均)</strong>到已选指标</p><p><img src='images/52904C0C-2AA0-431A-B2EC-A9940B522EBC.png' alt='52904C0C-2AA0-431A-B2EC-A9940B522EBC' /></p><p>​</p></li></ol><ol start='7' ><li><p>点击中心收起面板，查看您的图形。</p><p><img src='images/A1740286-69D5-43CF-B5D4-76B35AF78E0A.png' alt='A1740286-69D5-43CF-B5D4-76B35AF78E0A' /></p><p>​</p></li></ol><h3 id='graph-drill'><a name='header-c2350' class='md-header-anchor '></a>图形的钻取</h3><p>由于拖入的“行政区域”是一个树形维度，所以您可以利用分析云提供的钻取功能。使用方法如下：</p><ol start='' ><li><p>点击 <strong>河北</strong>的<strong>sales（求和）</strong>柱观察河北下属所有市的销售情况。</p><p><img src='images/D6722461-B186-4D25-9455-C16F4031E537.png' alt='D6722461-B186-4D25-9455-C16F4031E537' /></p><p><img src='images/D6A78731-339C-4CB5-8F08-6574947ED05A.png' alt='D6A78731-339C-4CB5-8F08-6574947ED05A' /></p><p>这时标题下面显示您已经钻取到<strong>中国&gt;河北&gt;全部市</strong></p><p>​</p></li></ol><ol start='2' ><li><p>点击“石家庄市“的柱子继续进行钻取</p><p><img src='images/17A9506B-1EF6-482A-96CA-9D14819290FF.png' alt='17A9506B-1EF6-482A-96CA-9D14819290FF' /></p><p>这时标题下面显示您钻取到了<strong>中国&gt;河北&gt;石家庄市&gt;全部区县</strong></p><p>​</p></li></ol><ol start='3' ><li><p>点击标题下方的钻取路径<strong>中国&gt;河北&gt;石家庄市&gt;全部区县</strong>最左侧的<strong>河北</strong>，回到省级销售情况。</p><p><img src='images/9D4B10DA-368E-4060-B5AF-E25CF7FACB06.png' alt='9D4B10DA-368E-4060-B5AF-E25CF7FACB06' /></p></li></ol><h3 id='filter-data'><a name='header-c2383' class='md-header-anchor '></a>通过维度筛选数据</h3><ol start='' ><li><p>点击屏幕下方中间带有漏斗图标的绿色圆形按钮</p><p><img src='images/8E28BE3C-AC15-4359-9E70-8DFB67388FB1.png' alt='8E28BE3C-AC15-4359-9E70-8DFB67388FB1' /></p><p>​</p></li><li><p>在弹出的维度面板中点击<strong>date</strong>维度</p></li><li><p>选择<strong>自定义时间区间</strong>，设定开始日期为：<strong>2016-9-19</strong>，结束日期为<strong>2016-9-19</strong></p><p><img src='images/3559885F-7778-4EE4-998E-D0E14D24F420.png' alt='3559885F-7778-4EE4-998E-D0E14D24F420' /></p><p>​</p></li><li><p>这时图形中的数据为**2016年9月19日的数据。
+<em>注：系统会筛选日期<strong>大于等于</strong> 2016年9月19日0点0分0秒 <strong>且小于等于</strong> 2016年9月19日23点59分59秒 之间的数据</em></p><p><img src='images/EA6AC36B-BD40-4C76-A2C6-D113E3D7B6B1.png' alt='EA6AC36B-BD40-4C76-A2C6-D113E3D7B6B1' /></p><p>​</p></li></ol><h3 id='filter-zhibiao-data'><a name='header-c2410' class='md-header-anchor '></a>通过指标筛选数据</h3><p>分析云支持通过指标筛选柱状图以及通过指标筛选表格，指标筛选有两种筛选方法：</p><ol start='' ><li>通过指标范围进行筛选，通过此方法系统会将符合此范围内的所有数据筛选出来</li><li>通过排行榜进行筛选，用户可以通过此方法筛选出最大N条数据或者最小N条数据
+<em>注：此方法的典型应用是筛选出TOP10的销售冠军</em></li></ol><p>以下步骤将带领您一步一步的进行指标筛选，您可以学习到如何在不同的图形中使用这两种方式进行筛选。</p><h4 id='filter-zhibiao-setIDrawer'><a name='header-c2423' class='md-header-anchor '></a>通过指标筛选柱状图</h4><ol start='' ><li><p>点击图形右上角的指标范围筛选</p><p><img src='images/FC4CB2D4-6FAF-4415-8EAF-526B29D61E9A.png' alt='FC4CB2D4-6FAF-4415-8EAF-526B29D61E9A' /></p><p>​</p></li><li><p>在弹出的面板中输入以下值
+指标：<strong>sales(求和)</strong>
+最大值：<strong>500</strong>
+最小值：<strong>200</strong></p><p><img src='images/328D71A4-30A5-4062-B9FF-2EF0F46489F3.png' alt='328D71A4-30A5-4062-B9FF-2EF0F46489F3' /></p><p>​</p></li><li><p>观察图形的变化</p><p><img src='images/6E7273C2-A147-4C2F-B1A5-251F008E49D4.png' alt='6E7273C2-A147-4C2F-B1A5-251F008E49D4' /></p><p>​</p></li><li><p>点击图形右上角的排行榜</p><p><img src='images/BA8C3439-B833-4434-8715-B61F6808C5ED.png' alt='BA8C3439-B833-4434-8715-B61F6808C5ED' /></p><p>​</p></li><li><p>在弹出的面板中输入以下值</p><p>指标：<strong>sales(求和)</strong></p><p><strong>TOP 5</strong></p><p><img src='images/977C7D12-632A-4CBF-BF5A-89470F2A676E.png' alt='977C7D12-632A-4CBF-BF5A-89470F2A676E' /></p><p>​</p></li><li><p>这时图形取消了之前做的指标范围筛选，重新在数据中选择了最大的5个值。</p><p><em>注：指标范围筛选和排行榜<strong>不能</strong>同时存在</em></p><p><img src='images/3AAEE092-E5C9-4C83-95EA-774E697665FB.png' alt='3AAEE092-E5C9-4C83-95EA-774E697665FB' /></p><p>​</p></li></ol><h4 id='filter-zhibiao-table'><a name='header-c2476' class='md-header-anchor '></a>通过指标筛选表格</h4><ol start='' ><li><p>点击下方右侧带有铅笔图标的灰色圆形按钮</p></li><li><p>在弹出的面板中选择树形表</p><p><img src='images/9046AF5B-8340-4CC6-B905-9047E4A17461.png' alt='9046AF5B-8340-4CC6-B905-9047E4A17461' /></p><p>​</p></li><li><p>点击表头sales(求和)</p><p><img src='images/114781D2-5914-4E9C-956F-A468A9BCFD9E.png' alt='114781D2-5914-4E9C-956F-A468A9BCFD9E' /></p><p>​</p></li><li><p>在弹出的菜单中选择筛选</p><p><img src='images/A13F3991-2406-4B6E-ABC6-783ACC2513F2.png' alt='A13F3991-2406-4B6E-ABC6-783ACC2513F2' /></p><p>​</p></li><li><p>重复<strong>通过指标筛选柱状图</strong>的<strong>2-6</strong>步</p><p>​</p></li></ol><h3 id='show-table-huizong'><a name='header-c2507' class='md-header-anchor '></a>显示表格汇总信息</h3><ol start='' ><li>​点击表格右上角的三个点的图标，呼出表格菜单</li><li>点击<strong>显示表格汇总</strong></li><li>选择</li></ol><h3 id='add-fx'><a name='header-c2518' class='md-header-anchor '></a>添加计算列</h3><ol start='' ><li><p>点击下方左侧的维度/指标蓝色圆形按钮</p></li><li><p>在指标类型的下拉菜单中选择<strong>计算列</strong></p></li><li><p>在窗口中的标题栏输入：<strong>销售占比</strong></p></li><li><p>在公式栏中输入：</p><pre class="md-fences md-end-block" lang="cube 语法"> <div class="CodeMirror cm-s-inner CodeMirror-wrap"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 0px; left: 4px;"></div><div class="CodeMirror-hscrollbar" style="left: 0px; min-height: 18px;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-vscrollbar" style="min-width: 18px;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-scrollbar-filler"></div><div class="CodeMirror-gutter-filler"></div><div class="CodeMirror-scroll" tabindex="-1"><div class="CodeMirror-sizer" style="margin-left: 0px; min-height: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: none;"><div class="CodeMirror-measure"><div style="width: 50px; height: 50px; overflow-x: scroll;"></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-code"><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><pre class=""><span style="padding-right: 0.1px;">"sales(合计)"/sum("sales(合计)")</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; top: 0px;"></div><div class="CodeMirror-gutters" style="display: none; height: 44px;"></div></div></div></pre><p> <em>注：分析云的计算列语句参考了Excel语句，可以支持常用的Excel公式，关于语法的更多信息请参考产品手册</em></p></li></ol><h3 id='save-analysis'><a name='header-c2535' class='md-header-anchor '></a>保存分析</h3><ol start='' ><li><p>点击右上角的<strong>保存</strong>按钮可以保存此分析</p></li><li><p>如果之前没有输入分析名称，这时系统会弹出窗口让您输入分析的名称</p></li><li><p>成功保存后左下角会弹出保存成功的提示</p></li><li><p>如果希望回退到分析列表可以点击左上角的<strong>后退</strong>按钮</p><p>​</p></li></ol><h3 id='saveas-analysis'><a name='header-c2551' class='md-header-anchor '></a>另存分析</h3><ol start='' ><li><p>点击右上角的<strong>另存为...</strong></p></li><li><p>系统会弹出窗口让您选择需要保存的路径</p></li><li><p>选定路径后点击<strong>保存</strong>，系统弹出分析名称的窗口，您可以在此修改分析名称。</p><p>​</p></li></ol><p>至此您已经学习到了关于制作分析的基本操作流程，后面的章节将带领您制作一个含有多个分析的驾驶舱。</p><p></p><p></p><h2 id='cockpit1st'><a name='header-c2571' class='md-header-anchor '></a>创建一个可互动的驾驶舱</h2><p>驾驶舱是一个含有多个分析的集合，驾驶舱设计的目的是让用户可以将多个分析放在一起用以说明一个业务问题的容器。使用驾驶舱可以帮助报表阅读者更好的理解报表制作者的意图。</p><h3 id='creat-cockpitFile'><a name='header-c2574' class='md-header-anchor '></a>创建驾驶舱文件夹</h3><ol start='' ><li><p>进入系统后首先点击左上角的菜单按钮呼出左侧菜单</p><p><img src='images/B4F6C2D7-89E3-4F7B-9D06-16F3B33D0C4B.png' alt='B4F6C2D7-89E3-4F7B-9D06-16F3B33D0C4B' /></p><p>​</p></li><li><p>呼出左侧菜单，点击<strong>驾驶舱</strong></p><p><img src='images/FEBD4E47-EC55-4B39-933A-5FE80617EC4A.png' alt='FEBD4E47-EC55-4B39-933A-5FE80617EC4A' /></p></li></ol><ol start='3' ><li><p>点击右上角蓝色的加号（+），在弹出的图标中选择文件夹图标</p><p><img src='images/20298867-0FF1-4B09-BF2B-7272C7DD574E.png' alt='20298867-0FF1-4B09-BF2B-7272C7DD574E' /></p></li></ol><ol start='4' ><li><p>输入文件夹名称<strong>&lt;您的名字&gt;的驾驶舱</strong>，并点击<strong>创建</strong>。</p><p><img src='images/3FA7E69C-CA95-40B6-BDCB-B4943D3C78B8.png' alt='3FA7E69C-CA95-40B6-BDCB-B4943D3C78B8' /></p></li></ol><ol start='5' ><li><p>这样您的文件夹就创建好了。
+<em>注：驾驶舱文件夹和分析的文件夹是相互隔离的，没有任何关系。</em></p><p><img src='images/4029F7A9-52BF-479B-A0B6-7CB44CEEB83A.png' alt='4029F7A9-52BF-479B-A0B6-7CB44CEEB83A' /></p><p>​</p></li></ol><h3 id='creat-cockpit'><a name='header-c2609' class='md-header-anchor '></a>创建驾驶舱</h3><p>通过以下步骤可以在刚刚新建的文件夹中创建您的驾驶舱。</p><ol start='' ><li><p>点击刚刚创建的文件夹。</p><p><em>注：点击文件夹名称的文字进入文件夹。</em></p><p><img src='images/BC704CE8-2B71-4A2D-93AA-98FB32CA0761.png' alt='BC704CE8-2B71-4A2D-93AA-98FB32CA0761' /></p><p>​</p></li><li><p>确认屏幕上方的路径正确
+<em>正确示例：驾驶舱&gt;张三的驾驶舱</em></p><p><img src='images/083830E0-0683-4E71-9878-CDA1B6F3A62D.png' alt='083830E0-0683-4E71-9878-CDA1B6F3A62D' /></p></li></ol><ol start='3' ><li><p>点击右上角的蓝色圆形加号并在弹出的图标中选择驾驶舱图标</p><p><img src='images/0742A151-0CCD-4B32-870E-F69ADABF4404.png' alt='0742A151-0CCD-4B32-870E-F69ADABF4404' /></p></li><li><p>在弹出的窗口中输入驾驶舱名称：<strong>销售报表</strong>，并点击<strong>创建</strong>。</p><p><img src='images/8EDB0A9C-75F8-4D72-98B7-F1BB9D9963B0.png' alt='8EDB0A9C-75F8-4D72-98B7-F1BB9D9963B0' /></p><p>​</p></li></ol><h3 id='add-text'><a name='header-c2641' class='md-header-anchor '></a>添加富文本</h3><ol start='' ><li><p>点击右下角的编辑按钮（铅笔图标）进入驾驶舱的编辑模式</p></li><li><p>点击<strong>添加富文本</strong>按钮
+<img src='images/92133282-4B72-4B74-BFB9-42E2018118A3.png' alt='92133282-4B72-4B74-BFB9-42E2018118A3' />
+​</p></li><li><p>在弹出的对话框中输入：</p><p><strong>标题：</strong>简要说明</p><p><strong>正文：</strong>这是一个用于练习的驾驶舱。</p><p><img src='images/1575A955-FB9E-4076-BE79-98FE05E6B8D6.png' alt='1575A955-FB9E-4076-BE79-98FE05E6B8D6' /></p><p></p></li><li><p>点击右下角的<strong>保存按钮</strong>（磁盘图标）保存驾驶舱</p><p><img src='images/ABA2389D-6190-4428-A9C5-A744FE4A85DB.png' alt='ABA2389D-6190-4428-A9C5-A744FE4A85DB' /></p><p></p></li></ol><h3 id='add-analysis'><a name='ddd' class='md-header-anchor '></a>添加分析</h3><ol start='' ><li>点击右下角的编辑按钮（铅笔图标）进入驾驶舱的编辑模式</li><li>点击<strong>添加分析</strong>按钮</li><li>在分析列表页中选择之前创建的分析（<strong>张三的分析 &gt; 区域销售情况汇总</strong>）</li><li>点击右下角的<strong>保存按钮</strong>（磁盘图标）保存驾驶舱</li></ol><p></p><h3 id='adjust-table-size'><a name='header-c2681' class='md-header-anchor '></a>调整单元格大小</h3><ol start='' ><li><p>点击右下角的编辑按钮（铅笔图标）进入驾驶舱的编辑模式。</p></li><li><p>点击第一行单元格的右侧+号，将单元格分割成两个单元格。</p><p><em>注：单元格最多可以分割两次，换句话说，每行最多只能有<strong>4</strong>个单元格</em></p></li><li><p>点击第一行单元格右下方的加号，系统会在此单元格下方创建一个新的单元格。</p></li><li><p>拖动第一行两个单元格之间的分割线可以改变两个单元格的宽度。</p></li><li><p>拖动第一行和第二行之间的分割线可以改变第一行单元格的高度。</p></li><li><p>拖动第二行的下边可以改变第二行单元格的高度。</p></li><li><p>点击右下角的<strong>保存按钮</strong>（磁盘图标）保存驾驶舱，并确认效果。</p><p>​</p></li></ol></div>
+</body>
+</html>

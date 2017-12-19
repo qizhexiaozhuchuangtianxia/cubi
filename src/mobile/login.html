@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="no" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <title>登录页面</title>
+    <link href="libs/materialize/css/icon.css" rel="stylesheet">
+    <link href="libs/materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link href="css/comment.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+<body>
+<div class="layout">
+    <div class="login-main" id="login-main">
+        <div class="login-logoBox" id="login-logoBox"><img src="images/logo.svg"></div>
+        <div class="login-form">
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">perm_identity</i>
+                    <input id="userName" type="text" class="validate" placeholder="请输入您的用户名">
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">lock_outline</i>
+                    <input id="password" type="password" class="validate" placeholder="请输入您的密码">
+                    <label for="password" id="lableText"><i class="material-icons prefix errorIcon">error_outline</i></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <a class="btn-large btn-large-btn disabled" id="loginBtn">登录</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="libs/jQuery-2.11/jquery-2.1.1.min.js"></script>
+<script src="libs/materialize/js/materialize.min.js"></script>
+<script src="js/biComment.js"></script>
+<script src="js/login.js"></script>

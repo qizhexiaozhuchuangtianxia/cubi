@@ -1,0 +1,781 @@
+/**start login page style*/
+.login-main{
+    width: 100%;
+    height: 100%;
+    padding-top: 0.74rem;
+    -webkit-transition: padding-top .4s;
+    -moz-transition: padding-top .4s;
+    -ms-transition: padding-top .4s;
+    -o-transition: padding-top .4s;
+    transition: padding-top .4s;
+}
+.login-main .login-logoBox{
+    width: 100%;
+    height: 0.6rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    -webkit-transition: margin-bottom .4s;
+    -moz-transition: margin-bottom .4s;
+    -ms-transition: margin-bottom .4s;
+    -o-transition: margin-bottom .4s;
+    transition: margin-bottom .4s;
+}
+.login-form{
+    width: 100%;
+    height: auto;
+    padding: 0 .5rem;
+}
+.login-form .input-field,.login-form .row,.login-form .row .col{
+    margin: 0;
+    padding: 0;
+}
+.login-form .row{
+    margin-bottom: .25rem;
+}
+.login-form .input-field .prefix{
+    width: .3rem;
+    height: 0.36rem;
+    line-height: 0.36rem;
+    font-size: .25rem;
+    text-align: center;
+    color: rgba(255,255,255,0.26);
+}
+.login-form .input-field .prefix.active{
+    color: rgba(255,255,255,0.87);
+}
+.login-form .input-field .prefix ~ input, .login-form .input-field .prefix ~ textarea{
+    margin-left: 0;
+}
+.login-form input{
+    width: 100%!important;
+    height: 0.36rem;
+    line-height: 0.36rem;
+    font-size: .16rem;
+    color: rgba(255,255,255,0.26);
+    padding-left: .35rem;
+    border-bottom: 0.01rem solid rgba(255,255,255,0.26);
+    margin-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.login-form input::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.26);
+}
+.login-form input[type=text]:focus:not([readonly]), .login-form input[type=password]:focus:not([readonly]){
+    border-bottom: 1px solid #29b6f6;
+    box-shadow: 0 1px 0 0 #29b6f6;
+    color: rgba(255,255,255,0.87);
+}
+.login-form input[type=text].valid,.login-form input[type=text]:focus.valid,.login-form input[type=password].valid, .login-form input[type=password]:focus.valid{
+    border-bottom: 1px solid rgba(255,255,255,0.24);
+    box-shadow: none;
+    color: rgba(255,255,255,0.87);
+}
+.login-form input[type=text].invalid, .login-form input[type=text]:focus.invalid, .login-form input[type=password].invalid,  .login-form input[type=password]:focus.invalid{
+    border-bottom: 1px solid #F44336;
+    box-shadow: 0 1px 0 0 #F44336;
+    top: 0;
+}
+.login-form .input-field label{
+    width: 100%;
+    font-size: .14rem;
+    top: 0.32rem;
+    left: 0;
+}
+.login-form .input-field label i{
+    right: 0;
+}
+.login-form .input-field .prefix ~ label{
+    margin: 0;
+}
+.login-form input[type=text] + label:after, .login-form input[type=password] + label:after{
+    top:10px;
+}
+.login-form .input-field label i.errorIcon{
+    font-size: .22rem;
+    color: #dd191d;
+    top: .01rem;
+    display: none;
+}
+.login-form .btn-large-btn{
+    width: 100%;
+    height: .36rem;
+    line-height: .36rem;
+    color: #fff!important;
+    font-size: .16rem;
+    padding: 0;
+    margin-top: .06rem;
+}
+.login-form .disabled{
+    background-color: rgba(255,255,255,0.1)!important;
+    color: rgba(255,255,255,0.24)!important;
+}
+.login-form .logoButton{
+    background-color: #03a9f4!important;
+}
+.login-form .logoButton:active{
+    background-color: #0288d1!important;
+}
+/**end login page style*/
+
+/**start dashboardList page style*/
+.dashboard-main-list{
+    width: 100%;
+    height: 100%;
+    padding-top: .66rem;
+    background: #eee;
+    -webkit-transition: padding-top 0.6s ease-in-out;
+    -moz-transition: padding-top 0.6s ease-in-out;
+    -ms-transition: padding-top 0.6s ease-in-out;
+    -o-transition: padding-top 0.6s ease-in-out;
+    transition: padding-top 0.6s ease-in-out;
+}
+.dashboard-main-list-paddingTop{
+    padding-top: .1rem;
+}
+.dashboard-main-list .dashboard-top{
+    width: 100%;
+    height: .56rem;
+    background-color: #424242;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    opacity: 1;
+    -webkit-transition: opacity 0.6s ease-in-out;
+    -moz-transition: opacity 0.6s ease-in-out;
+    -ms-transition: opacity 0.6s ease-in-out;
+    -o-transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.6s ease-in-out;
+}
+.dashboard-main-list .dashboard-top-hide{
+    opacity: 0;
+}
+.dashboard-main-list .dashboard-top .iconBox{
+    width: auto;
+    height: .56rem;
+    position: absolute;
+    left: 0.16rem;
+}
+.dashboard-main-list .dashboard-top .iconBox i{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    color: #fff;
+    font-size: .24rem;
+    line-height: .24rem;
+    margin-top: .15rem;
+}
+.dashboard-main-list .dashboard-top .menuIcon a{
+    width: .18rem;
+    height: .56rem;
+    background: url("../images/topBarIcon.png") left 22px no-repeat;
+    display: block;
+}
+.dashboard-main-list .dashboard-top .showSelect{
+    float: left;
+    width: auto;
+    max-width: .6rem;
+    height: .56rem;
+    line-height: .56rem;
+    margin-right: .1rem;
+    display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    margin-left:.72rem;
+    color: #fff;
+    background: url("../images/topBarIcon.png") right 20px no-repeat;
+    padding-right: .2rem;
+}
+.selectBoxButton{
+    position: absolute;
+    bottom:-1.14rem;
+    left: 0;
+    width: 100%;
+    height: 1.14rem;
+    overflow: hidden;
+    background: #fafafa;
+    font-size: .16rem;
+    -webkit-transition: bottom 0.2s ease-in-out;
+    -moz-transition: bottom 0.2s ease-in-out;
+    -ms-transition: bottom 0.2s ease-in-out;
+    -o-transition: bottom 0.2s ease-in-out;
+    transition: bottom 0.2s ease-in-out;
+    -webkit-box-shadow: 0 -1px 1px #d8d8d8;
+    -moz-box-shadow: 0 -1px 1px #d8d8d8 ;
+    box-shadow: 0 -1px 1px #d8d8d8 ;
+}
+.selectBoxShow{
+    bottom: 0;
+}
+.selectBoxButton ul{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.selectBoxButton ul li{
+    width: 100%;
+    height: .48rem;
+    line-height: .48rem;
+    text-align: left;
+    padding-left: .16rem;
+}
+.selectBoxButton ul li.selectOn{
+    color: #03a9f4;
+}
+.dashboard-down{
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    overflow: hidden;
+}
+.dashboard-down .scrollRefresh{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.dashboard-down .scrollRefresh .collection{
+    height: auto;
+    margin: 0;
+    border:0;
+}
+.dashboard-down .scrollRefresh .collection .collection-item{
+    padding-bottom: 0;
+    margin-bottom: .1rem;
+    background: none;
+}
+.dashboard-down .collection-item a{
+    display: block;
+    width: auto;
+    height: 100%;
+}
+.dashboard-down .collection-item.avatar{
+    min-height: .58rem;
+    border-bottom: none;
+    height: .7rem;
+    line-height: normal;
+}
+.dashboard-down .collection-item.avatar a{
+    line-height: normal;
+}
+.dashboard-down .collection-item.avatar a span{
+    margin-bottom: .05rem;
+}
+.dashboard-down li.collection-item:active{
+    background-color: #b3e5fc;
+    opacity: 1;
+}
+.dashboard-down .collection .collection-item.avatar i.circle{
+    width: .4rem;
+    height: .4rem;
+    background: url("../images/reportIcon.png") 13px -1042px no-repeat #424242;
+    left: .16rem;
+}
+.dashboard-down .collection .collection-item.avatar i.Pie2D{
+    background-position: 11px 11px;
+}
+.dashboard-down .collection .collection-item.avatar i.ScrollArea2D{
+    background-position: 11px 11px;
+}
+.dashboard-down .collection .collection-item.avatar i.Column2D{
+    background-position: 11px -60px;
+}
+.dashboard-down .collection .collection-item.avatar i.ScrollColumn2D{
+    background-position: 11px -60px;
+}
+.dashboard-down .collection .collection-item.avatar i.Pareto2D{
+    background-position: 11px -132px;
+}
+.dashboard-down .collection .collection-item.avatar i.StackedArea2D{
+    background-position: 10px -204px;
+}
+.dashboard-down .collection .collection-item.avatar i.ScrollLine2D{
+    background-position: 11px -276px;
+}
+.dashboard-down .collection .collection-item.avatar i.Pyramid{
+    background-position: 11px -348px;
+}
+.dashboard-down .collection .collection-item.avatar i.Funnel{
+    background-position: 11px -420px;
+}
+.dashboard-down .collection .collection-item.avatar i.StackedColumn2D{
+    background-position: 11px -492px;
+}
+.dashboard-down .collection .collection-item.avatar i.BASE{
+    background-position: 8px -578px;
+}
+.dashboard-down .collection .collection-item.avatar i.TREE{
+    background-position: 8px -611px;
+}
+.dashboard-down .collection .collection-item.avatar i.TEXT{
+    background-position: 8px -549px;
+}
+.dashboard-down .collection .collection-item.avatar i.Marimekko{
+    background-position: 7px -945px;
+}
+.dashboard-down .collection .collection-item.avatar i.Doughnut2D{
+    background-position: 8px -906px;
+}
+.dashboard-down .collection .collection-item.avatar i.ScrollCombiDY2D{
+    background-position: 8px -742px;
+}
+.dashboard-down .collection .collection-item.avatar i.CROSS{
+    background-position: 8px -677px;
+}
+.dashboard-down .collection .collection-item.avatar i.CATEGORY{
+    background-position: 8px -644px;
+}
+.dashboard-down .collection .collection-item.avatar i.AngularGauge{
+    background-position: 8px -808px;
+}
+.dashboard-down .collection .collection-item.avatar i.wordCloud{
+    background-position: 8px -774px;
+}
+.dashboard-down .collection .collection-item.avatar i.HlinearGauge{
+    background-position: 8px -841px;
+}
+.dashboard-down .collection .collection-item.avatar i.FCMap_China2{
+    background-position: 8px -872px;
+}
+.dashboard-down .collection .collection-item.avatar .title{
+    display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    font-size: .16rem;
+    color:rgba(66,66,66,0.87)
+}
+.dashboard-down .collection .collection-item.avatar p{
+    font-size: 14px;
+    color:rgba(66,66,66,0.54);
+    border-bottom: 1px solid rgba(66,66,66,0.26);
+    padding-bottom: .15rem;
+}
+.loading{
+    width: 35%;
+    position: absolute;
+    margin-top: 50%;
+    left: 50%;
+    margin-left: -17.5%;
+}
+.loading .loadingLogo{
+    width: 100%;
+    max-width: 1.36rem;
+    margin: 0 auto;
+    height: .6rem;
+    background: url("../images/load.svg") center no-repeat;
+    background-size: 100%;
+}
+.progress{
+    width: 100%;
+    max-width: 136px;
+    margin: 0.05rem auto;
+    background-color: #00e5ff;
+}
+.progress .indeterminate{
+    background-color: #03a9f4;
+}
+.pullClose{
+    width: 100%;
+    visibility: hidden;
+    text-align: center;
+    font-size: 14px;
+}
+.pullOn{
+    width: 100%;
+    text-align: center;
+    visibility: inherit;
+    font-size: 14px;
+}
+.spinner{
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+.spinner > div,.pullOn > div,.pullClose > div {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+    animation: bouncedelay 1.4s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+.spinner .bounce1,.pullOn .bounce1,.pullClose .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+.spinner .bounce2,.pullOn .bounce2,.pullClose .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+.side-nav-list{
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.9);
+    -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.9);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.9);
+}
+.side-nav-list .slider-left-top{
+    width: 100%;
+    height: 1.33rem;
+    background-color: #3c3c3c;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: .18rem;
+    padding-top: .25rem;
+}
+.side-nav-list .slider-left-top dl dt{
+    width: 1.16rem;
+    height: .54rem;
+    overflow: hidden;
+    margin-bottom: .1rem;
+}
+.side-nav-list .slider-left-top dl dt img{
+    width: 1.16rem;
+    height: .54rem;
+}
+.side-nav-list .slider-left-top dl dd{
+    height: .2rem;
+    line-height: .2rem;
+    color: #fff;
+    font-size: .14rem;
+}
+.side-nav-list .no-border{
+    border: none;
+    margin: .1rem 0;
+}
+.side-nav-list .slider-list .no-border{
+    border: none;
+}
+.side-nav-list .slider-list a.collection-item{
+    padding: 0;
+    color: rgba(66,66,66,0.87);
+    height: .54rem;
+    line-height: .54rem;
+    padding: 0  .18rem;
+    font-size: .14rem;
+}
+.side-nav-list .slider-list a.collection-item:before{
+    content: '';
+    font-size: .14rem;
+    line-height: .27rem;
+    color: rgba(0, 0, 0, .87);
+    padding: 0;
+    float: left;
+    width: .22rem;
+    height: .22rem;
+    margin-top: .15rem;
+    background-image: url("../images/left-icon.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    margin-right: .26rem;
+}
+.side-nav-list .slider-list a.collection-item.jsc-icon:before{
+    background-position: 0 -144px;
+}
+.side-nav-list .slider-list a.collection-item.report-icon:before{
+    background-position: 0 -96px;
+}
+.side-nav-list .slider-list a.collection-item.quit-login-icon:before{
+    background-position: 0 -296px;
+}
+.side-nav-list .slider-list a.collection-item:not(.active):active{
+    background-color: #b3e5fc;
+}
+#userNameBox {
+    color: #fff;
+    font-size: .12rem;
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: normal;
+}
+.nullDashboard{
+    width: 100%;
+    position: relative;
+}
+.nullBox{
+    width: 80%;
+    margin: 0 auto;
+    position: absolute;
+    padding-top: 130px;
+    left: 50%;
+    top: 38%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: url("../images/msg_icon.png") center no-repeat;
+}
+/**end dashboardList page style*/
+/**start dashboardDetail page style*/
+.dashboard-main-detail{
+    background: #fff;
+    position: relative;
+}
+.dashboard-main-list .dashboard-top .backIcon a{
+    width: .18rem;
+    height: .56rem;
+    background: url("../images/topBarIcon.png") left -22px no-repeat;
+    display: block;
+}
+.dashboard-main-list .dashboard-top .titleBox{
+    text-align: center;
+    font-size: .18rem;
+    width:60%;
+    height: .56rem;
+    line-height: .56rem;
+    color: #fff;
+    display:block;
+    white-space:nowrap; 
+    overflow:hidden; 
+    text-overflow:ellipsis;
+    margin:0 auto;
+}
+.footerIcon{
+    width: .12rem;
+    height: .12rem;
+    position: fixed;
+    bottom:.1rem;
+    left: 50%;
+    z-index: 10;
+    text-align: center;
+    opacity: 0.5;
+    overflow: hidden;
+    background: url("../images/topBarIcon.png") -96px -45px no-repeat;
+}
+.detailMain{
+    width: 100%;
+    height: 100%;
+    padding-top: .2rem;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.topBox{
+    width: 100%;
+    height: .2rem;
+    line-height: .2rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: right;
+    font-size: .12rem;
+    padding: 0 .16rem;;
+    z-index: 11;
+}
+.topBox span{
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.87);
+}
+.topBox span:first-child{
+    color: rgba(0, 0, 0, 0.87);
+}
+.downBox{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    padding:0 .16rem 0;
+}
+.downBox ul{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.downBox ul li{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    margin-bottom: .2rem;
+    font-size: .12rem;
+}
+.loadingText{
+    width: 35%;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 38%;
+    text-align: center;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: .12rem;
+}
+.noMore{
+    width: 100%;
+    font-size: .12rem;
+    text-align: center;
+    font-style: normal;
+    display: none;
+}
+.table-report{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: .1rem;
+}
+.table-report .lookDetailBtn{
+    width: 100%;
+    color: #03a9f4;
+    text-align: left;
+    font-size: .14rem;
+    line-height: .25rem;
+    height: .25rem;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.table-report .text-accent-1{
+    width: 100%;
+    height: 100%;
+    padding-top: .2rem;
+    text-align: left;
+}
+.table-report .downTable{
+    width: 100%;
+    height: 100%;
+    padding-top: .2rem;
+}
+.table-report .tableBox{
+    width: 100%;
+    height: 100%;
+    table-layout: fixed;
+}
+.table-report .tableBox td{
+    height: 10%;
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-top: 1px solid rgba(0,0,0,0.12);
+    text-align: center;
+    font-size: .12rem;
+    white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+}
+.table-report .tableBox thead tr td{
+    color: rgba(0,0,0,0.54);
+}
+.table-report .tableBox tbody tr td{
+    color: rgba(0,0,0,0.87);
+}
+/**end dashboardDetail page style*/
+
+/*--------start dashboard-report-table-detail-------*/
+.detailTableMain{
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.detailTableMain .tableDetail{
+    width: 100%;
+    height: 100%;
+    padding: 0 .16rem 0;
+}
+.detailTableMain .tableDetail .scrollX{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.detailTableMain .tableDetail .scrollX .scrollXBox{
+    width:auto;
+    height: 100%;
+    min-width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.tablePadding{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding-top: .43rem;
+}
+.tablePadding .tableTop{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: .43rem;
+    background-color: #fff;
+}
+.tablePadding .tableTop table{
+    table-layout: fixed;
+}
+.tablePadding .tableTop table thead{
+    border: 0;
+}
+.tablePadding .tableTop table thead tr td{
+    font-size: .12rem;
+    text-align: center;
+    color: rgba(0,0,0,0.54);
+    font-weight: normal;
+    white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+}
+.tablePadding .tableDown{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.tablePadding .tableDown .scrollTable{
+    width:auto;
+    height: auto;
+    position: relative;
+}
+.tablePadding .tableDown .scrollTable table{
+    table-layout: fixed;
+}
+.tablePadding .tableDown .scrollTable tbody tr td{
+    font-size: .12rem;
+    text-align: center;
+    color: rgba(0,0,0,0.87);
+    border-bottom: 1px solid rgba(0,0,0,0.12);
+    border-top: 1px solid rgba(0,0,0,0.12);
+    white-space: nowrap;text-overflow: ellipsis;overflow: hidden;
+    padding:13px 5px;
+}
+.loadingLogo{
+    width: 100%;
+    max-width: 136px;
+    margin: 0 auto;
+    height: .6rem;
+    background: url("../images/load.svg") center no-repeat;
+    background-size: 100%;
+}
+/*--------end dashboard-report-table-detail-------*/
+/*--------start dashboard-report-text-detail-------*/
+.textDetail{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.textDetail .textDetailScroll{
+    width: 100%;
+    height: auto;
+    float: left;
+    position: relative;
+}
+/*--------end dashboard-report-text-detail-------*/

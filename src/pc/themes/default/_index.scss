@@ -1,0 +1,187 @@
+/**
+ * 主框架页宽度
+ * 需要增加响应式
+ */
+body {
+	overflow:hidden;
+}
+$textColor: #bdc5c9;
+$textActveColor: #dde1e3;
+.hide {display:none;}
+.bodyer {height:100%; 	position: relative;}
+#app {
+	height: 100%;
+	overflow: hidden;
+}
+.page-container {
+	padding:0 24px;
+	height: 56px;
+}
+
+.app-loading-container {
+	width: 100%;
+	height: 100%;
+}
+
+.main {
+	padding:0 24px;
+}
+
+/**
+ * 顶部和左侧菜单
+ */
+.page-top-nav {
+	height: 80px;
+	position: absolute;
+	z-index: 999;
+
+	header {
+		width: 100%;
+		height: 80px;
+		position: fixed;
+		box-shadow: 0 2px 2px #24353e;
+		.logo {
+			
+			height: 40px;
+			margin-top: 8px;
+			margin-left: 28px;
+			float: left;
+			 
+		}
+		.menu-btn {
+			width: 24px!important;
+			height: 24px!important;
+			padding:0!important;
+			float: left!important;
+			margin-top: 16px!important;
+			transition:transform .2 ease;
+			-ms-transition:-ms-transform .2 ease;
+			-moz-transition:-moz-transform .2 ease;
+			-o-transition:-o-transform .2 ease;
+			-webkit-transition:-webkit-transform .2 ease;
+			span{
+				color:#fff!important;
+			}  
+			&:hover{
+				transform:rotate(360deg);
+				-ms-transform:rotate(360deg); 	/* IE 9 */
+				-moz-transform:rotate(360deg); 	/* Firefox */
+				-webkit-transform:rotate(360deg); /* Safari 和 Chrome */
+				-o-transform:rotate(360deg); 	/* Opera */
+			}
+		}
+		.top-bar {
+			width: 100%;
+			height: 24px;
+			background-color: #263238!important;
+		}
+		.nav {
+			display: block;
+			height: 56px;
+			background-color: #37474f!important;
+
+			.commands {
+				// margin-top: 15px;
+				float:right;
+				width: 400px;
+				text-align: right;
+				a {
+					color: #FFF;
+					font-size: 16px;
+					padding: 0 1em;
+				}
+				&>div.commandBox{
+					float: right;
+				}
+			}
+		}
+		.headerLineClassName{
+			height: 26px;
+			width: 1px;
+			background-color: #fff;
+			margin:15px 24px;
+			float: left;
+		}
+		.headerNavClassName{
+			float: left;
+			height: 56px;
+			.pageNavClassName{
+				height: 56px;
+				&>ul{
+					list-style: none;
+				}
+				&>ul li{
+					float: left;
+					height: 56px;
+					line-height: 56px;
+					color: #fff;
+					cursor: pointer;
+					&.noPointer{
+						cursor: default;
+					}
+					&>a{
+						color: #fff;
+						font-size: 16px;
+						text-decoration: none;
+					}
+					&>span{
+						display: inline-block;
+						margin: 0 8px;
+					}
+				}
+			}
+		}
+	}
+}
+.page-main-frame {
+	position: relative;
+	// z-index: 99;
+	height: 100%;
+	padding-top:80px;
+}
+.iconMenuClassName > button{
+	float: left;
+	padding:0!important;
+	width: auto!important;
+	height: auto!important;
+}
+.nullClassName{
+	width: 100%!important;
+	height: 260px!important;
+	line-height: 260px!important;
+	text-align: center!important;
+	font-size: 14px!important;
+	color: #fff!important;
+}
+li.loading{
+	position: relative;
+	width: 100%!important;
+	height: 240px!important;
+}
+.dashboardErrorMessage{
+	width: 100px;
+	height: 72px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	text-align: center;
+	div{
+		width: 100%;
+		height: 48px;
+		text-align: center;
+		font-size: 48px;
+		color:#cfd8dc;
+	}
+	p{
+		width: 100%;
+		height: 35px;
+		line-height: 35px;
+		font-size: 14px;
+		float: left;
+		color:rgba(0,0,0,.54);
+	    font-family: "Microsoft YaHei";
+	}
+}

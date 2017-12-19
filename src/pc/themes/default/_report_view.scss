@@ -1,0 +1,5362 @@
+/**
+**report css style
+**
+*/
+.reportBoxPanel{
+	width: 100%;
+	height: 100%;
+	padding: 32px;
+	.reportBoxPanelMin{
+		width: 100%;
+		height: 100%;
+		background-color: #fff;
+		border-radius: 2px;
+		position: relative;
+
+	}
+}
+.reportHeaderClassName {
+	// position: absolute;
+	left: 0;
+	top: 0;
+	// top: 38px;
+	width: 100%;
+	// display: inline-block;
+	padding: 24px 0 0 24px;
+	/*
+	padding: 24px; */
+	color: #333;
+	z-index: 100;
+
+	.titleZhuBox {
+		width: 100%;
+		font-size: 24px;
+		font-weight: normal;
+		color: rgba(0, 0, 0, .87);
+	}
+	.titleFuBox {
+		width: 100%;
+		font-size: 16px;
+		font-weight: normal;
+		color: rgba(0, 0, 0, .54);
+		margin-top: 8px;
+		margin-bottom: 6px;
+	}
+
+}
+.KPIDiv{
+	width: 100%;
+	height: 100%;
+	display: table;
+	.kpiContent{
+		vertical-align: middle;
+		display: table-cell;
+		
+		.small{
+			.mainConditionValue{
+				font-size:56px !important;
+				height: 44px  !important ;
+			     line-height: 43px  !important ;
+			}
+			.mainUtil{font-size:16px !important;}
+			.viceConditionValue{
+				font-size:42px !important;
+				height: 39px  !important ;
+			     line-height: 40px  !important ;
+			}
+			.viceUtil{font-size:16px !important;}
+			.mainQuota{font-size: 16px !important;}
+			.viceQuota{font-size: 16px !important;}
+			
+		}
+		.middle{
+			.mainConditionValue{
+					font-size:62px !important;
+					line-height: 51px !important;
+					height: 51px !important;
+			}
+			.mainUtil{font-size:18px !important;}
+			.viceConditionValue{
+					font-size:48px !important;
+					height: 40px  !important;
+					line-height: 41px  !important;
+			}
+			.viceUtil{font-size:18px !important;}
+			.mainQuota{font-size: 18px !important;}
+			.viceQuota{font-size: 18px !important;}
+			
+		}
+		.least{
+			.mainConditionValue{
+				font-size:48px !important;
+				height: 40px  !important;
+				line-height: 41px  !important;
+			}
+			.mainUtil{font-size:14px !important;}
+			.viceConditionValue{
+				font-size:34px !important;
+				height: 28px  !important;
+				line-height: 28px  !important;
+			}
+			.viceUtil{font-size:14px !important;}
+			.mainQuota{font-size: 14px !important;}
+			.viceQuota{font-size: 14px !important;}
+		}
+		.verySmall{
+			.mainConditionValue{
+				font-size:32px !important;
+				height: 33px  !important;
+				line-height: 33px  !important;
+			}
+			.mainUtil{font-size:14px !important;}
+			.viceConditionValue{
+				font-size:18px !important;
+				height: 23px  !important;
+				line-height: 23px  !important;
+			}
+			.viceUtil{font-size:12px !important;}
+			.mainQuota{font-size: 12px !important;}
+			.viceQuota{font-size: 12px !important;}
+		}
+		.large_cont{
+			// position: relative;
+			// left: 50%; 
+			text-align: left;
+		    margin-right: auto;
+		    margin-left: auto;
+		}  
+		.large{
+			.mainConditionValue{
+				font-size:86px;
+			}
+			.mainUtil{  
+				font-size:18px;
+			}
+			.viceConditionValue{
+				font-size:66px; 
+			}
+			.viceUtil{
+				font-size:18px; 
+			}
+			.mainQuota{
+				font-size: 18px;
+			}
+			.viceQuota{
+				font-size: 18px;
+			}
+
+		} 
+		.mainItem{  
+			.maincont{
+				font-size: 0;  
+				display: -webkit-inline-box; 
+				.mainQuota{ 
+					color: rgba(0, 0, 0, .7);
+					margin-bottom: 8px;
+				}
+				.mainConditionValue{	
+					 display: inline-block;
+					font-family: Arial;
+					height: 68px;
+				    line-height: 68px;
+				    margin-right: 6px;
+				}
+				.mainUtil{
+					color: rgba(0, 0, 0, .7);
+				}
+			}
+		}
+		.viceItem{
+
+			margin-top: 17px;
+			.vicecont{
+				font-size: 0;
+				display: -webkit-inline-box; 
+				.viceQuota{
+					color: rgba(0, 0, 0, .7);
+					margin-bottom: 8px;
+				}
+				.viceConditionValue{
+					display: inline-block;
+					font-family: Arial;
+					height: 54px;
+				     line-height: 55px;
+				     margin-right: 6px;
+				}
+				.viceUtil{
+					color: rgba(0, 0, 0, .7);
+				}
+			}
+		} 
+		
+		
+	}
+}
+/**
+ * 报表页面
+ */
+
+/*start表格和图形编辑页面的样式**/
+.page-report-view {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	// padding-bottom: 120px;
+	.report-height{
+		height: calc(100% - 85px) !important;
+	}
+	.report-panel {
+		width:100%;
+		height:100%;
+		position: relative;
+		.tableShowScroll {
+			padding:0!important;
+		}
+		.tableView {
+			width:100%;
+			height:100%;
+			position: relative;
+			padding: 24px 24px 260px 24px;
+			.tableViews{
+				width:100%;
+				height:100%;
+				background:#fff;
+				border-radius: 2px;
+				.table-context {
+					min-height:370px;
+					position: relative;
+				}
+				.tableShowScroll{
+					.table-context {
+						// min-height:640px;
+						position: relative;
+					}
+					.min-table-content {
+						height: 380px;
+						min-height:286px;
+					}
+				}
+			}
+		}
+	}
+
+	.main-view {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		margin-bottom: 120px;
+		.reportRightMenu {
+			position: absolute;
+			right: 24px;
+
+			// top: 48px;
+			top: 24px;
+			width: 24px;
+			height: 26px;
+			z-index: 999;
+			&>div{
+				width: 24px;
+				height: 24px;
+				&>span{
+					width: 24px;
+					height: 24px;
+					&:hover{
+						background: none!important;
+					}
+					&>div{
+						width: 24px;
+						height: 24px;
+						padding: 0!important;
+						margin: 0!important;
+						&>div{
+							width: 24px;
+							height: 24px;
+							line-height: 24px!important;
+							padding: 0!important;
+							margin: 0!important;
+							button.moreIconsClassName{
+								width: 24px!important;
+								height: 24px!important;
+								padding: 0!important;
+								margin: 0!important;
+								left: 0!important;
+								&>div{
+									width: 24px;
+									height: 24px;
+									&>span{
+										width: 24px;
+										height: 24px;
+										line-height: 24px!important;
+										&.iconfont{
+											color: #666666!important;
+											cursor: pointer;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.reportHeaderClassName {
+			// position: absolute;
+			left: 0;
+			// top: 0;
+			width: 100%;
+			// height: 88px;
+			// padding: 48px 48px 0 48px;
+			color: #333;
+			z-index: 100;
+
+			.titleZhuBox {
+				width: 100%;
+				height: 30px;
+				line-height: 30px;
+				font-size: 24px;
+				font-weight: normal;
+				color: rgba(0, 0, 0, .87);
+			}
+			.titleFuBox {
+				width: 100%;
+				font-size: 16px;
+				font-weight: normal;
+				color: rgba(0, 0, 0, .54);
+				margin-top: 8px;
+			}
+		}
+		.tableShowScroll {
+			width: 100%;
+			height: 100%;
+			padding: 32px 32px 0 32px;
+			//position: relative;
+			.table-view {
+				width: 100%;
+				height: 100%;
+				background-color: #fff;
+				border-radius: 2px;
+				// padding-top: 84px;
+				position: relative;
+				overflow: hidden !important;
+				.table-context {
+					width: 100%;
+					height: 86%;
+					// padding-bottom: 58px;
+					position: relative;
+					.noGetReportError{
+						margin-left: -38px;
+						margin-top: -95px;
+						overflow: hidden;
+   						height: 148px;
+					}
+					.table-gundong {
+						width: 100%;
+						height: 100%;
+
+						.table-container {
+							width: 100%;
+							height: auto;
+							// padding-top:25px;
+							&>table {
+								width: 100%;
+								height: auto;
+								.stat_row_td{
+									color:rgba(3,169,244,0.87) !important;
+									text-align: left !important;
+								}
+								.stat_row_tdTOTAL{
+									color:rgba(3,169,244,0.87) !important;
+									font-weight: bold;
+								}
+								td {
+									height: 48px;
+									line-height: 48px;
+									border-bottom: #dcdcdc solid 1px;
+									padding: 0  0 0 32px;
+									span {
+										white-space: nowrap;
+										// padding: 0  0 0 24px;
+									}
+									.toptitle {
+										cursor: pointer;
+									}
+								}
+								.drill-down{
+									cursor: pointer;
+								}
+								&>thead tr td {
+									color: rgba(0, 0, 0, .56);
+									font-size: 12px;
+									height: 55px;
+									line-height: 55px;
+									// span:nth-child(2) {
+									// 	width: 16px;
+									// 	height: 18px;
+									// 	line-height: 16px;
+									// 	padding: 0;
+									// 	display: inline-block;
+									// 	font-size: 16px;
+									// 	transform: rotate(90deg);
+									// 	-ms-transform: rotate(90deg); 	/* IE 9 */
+									// 	-moz-transform: rotate(90deg); 	/* Firefox */
+									// 	-webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+									// 	-o-transform: rotate(90deg); 	/* Opera */
+									// 	color: rgba(0, 0, 0, .56);
+									// 	opacity: 0;
+									// 	cursor: pointer;
+									// }
+									.title{
+										//margin-left: 5px;
+									}
+									.sort {
+										display: inline-block;
+										width: 16px;
+										height: 16px;
+										line-height: 16px;
+										transform: rotate(-90deg);
+										-ms-transform: rotate(-90deg); 	/* IE 9 */
+										-moz-transform: rotate(-90deg); 	/* Firefox */
+										-webkit-transform: rotate(-90deg); /* Safari 和 Chrome */
+										-o-transform: rotate(-90deg); 	/* Opera */
+										// vertical-align: middle;
+										cursor: pointer;
+										color: #ccc;
+									}
+									.sort.up {
+										color: rgba(0, 0, 0, 0.87);
+										transform: rotate(90deg);
+										-ms-transform: rotate(90deg); 	/* IE 9 */
+										-moz-transform: rotate(90deg); 	/* Firefox */
+										-webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+										-o-transform: rotate(90deg); 	/* Opera */
+									}
+									.sort.down {
+										color: rgba(0, 0, 0, 0.87);
+										transform: rotate(-90deg);
+										-ms-transform: rotate(-90deg); 	/* IE 9 */
+										-moz-transform: rotate(-90deg); 	/* Firefox */
+										-webkit-transform: rotate(-90deg); /* Safari 和 Chrome */
+										-o-transform: rotate(-90deg); 	/* Opera */
+									}
+
+									&:hover span {
+										color: rgba(0, 0, 0, .87);
+										opacity: 1;
+									}
+
+									.edit{
+										vertical-align: middle;
+										margin-left: 5px;
+										visibility: hidden;
+										cursor: pointer;
+									}
+
+									.table-header-col-edit{
+										border: #dcdcdc solid 1px;
+										border-bottom: none;
+										width: 100%;
+										height: 100%;
+										padding: 0 15px;
+									}
+
+									&:hover{
+										.edit{
+											visibility: visible;
+										}
+									}
+								}
+
+								.toptitle-cursor{
+										cursor: pointer;
+								}
+								&>tbody tr td {
+									color: rgba(0, 0, 0, .87);
+									font-size: 13px;
+									transition: background .5s;
+									-moz-transition: background .5s;
+									-webkit-transition: background .5s;
+									-ms-transition: background .5s;
+								}
+								&>tbody tr:hover td {
+									// background-color: #eee;
+									color: #03a9f4;
+								}
+							}
+						}
+					}
+
+					.msg_position {
+						position: absolute;
+						left: 50%;
+						top: 50%;
+						margin-top: -50px;
+						margin-left: -54px;
+					}
+				}
+				.table-context-add{
+					padding-bottom: 20px;
+					height: 90%;
+				}
+			}
+			.table-page {
+				width: 100%;
+				height: 58px;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				padding-right: 52px;
+				.pager-view {
+					width: 100%;
+					margin-top: 10px;
+					text-align: right;
+					font-size: 13px;
+
+					&>a {
+						width: 24px;
+						height: 24px;
+						text-decoration: none;
+						display: inline-block;
+						color: rgba(0, 0, 0, .54);
+
+						i {
+							font-size: 24px !important;
+							float: left;
+							margin-top: 6px;
+						}
+					}
+					&>a.pre-page {
+						margin-left: 16px;
+						margin-right: 12px;
+					}
+				}
+			}
+
+		}
+		.chart-height{
+			height: calc(100% - 85px) !important;
+		}
+		.chart-view {
+			height: 100%;
+			width: 100%;
+			padding: 24px 24px 120px 24px;
+
+			.chart-box-container {
+				width: 100%;
+				height: 100%;
+				position: relative;
+				background-color: #fff;
+				border-radius: 2px;
+				padding: 2px;
+				display: block;
+
+				.reportHeaderClassName {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 88px;
+					display: inline-block;
+					padding: 22px 22px 0 22px;
+					color: #333;
+					z-index: 100;
+
+					.titleZhuBox {
+						width: 100%;
+						font-size: 24px;
+						font-weight: normal;
+						color: rgba(0, 0, 0, .87);
+					}
+					.titleFuBox {
+						width: 100%;
+						font-size: 16px;
+						font-weight: normal;
+						color: rgba(0, 0, 0, .54);
+						margin-top: 8px;
+					}
+
+
+				}
+				.chartPanel {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					.chart-container {
+						width: 100%;
+						height: 100%;
+					}
+				}
+			}
+		}
+	}
+	.report-loading-box{
+		position:relative;
+		width:100%;
+		.loading-text-box{
+
+			&.hide{
+				opacity:0
+			}
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			position: absolute;
+			bottom: -90px;
+			.loading-icon{
+				width:25px;
+				height:25px;
+				margin-top: 50px;
+				position: absolute;
+			    left: 50%;
+			    top: 50%;
+			    margin: -25px 0 0 -25px;
+			}
+			.loading-text{
+				text-align: center;
+				font-size: 16px;
+				color: #78909c;
+				margin-top: 90px;
+				position: absolute;
+			    width: 150px;
+			    height: 20px;
+			    left: 50%;
+			    top: 100%;
+			    margin: 20px -75px;
+			}
+
+		}
+		.loading-last-text{
+
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+			position: absolute;
+			bottom: -100px;
+			text-align: center;
+			font-size: 16px;
+			color: #78909c;
+			&.hide{
+				opacity:0
+			}
+		}
+	}
+	.lastCountPage{
+		height: 64px;
+		position: relative;
+		.countPageNum{
+			height:64px;
+			line-height: 64px;
+			font-size: 12px;
+			color: rgba(0,0,0,0.54);
+			position: absolute;
+			right:24px;
+			top:0;
+		}
+	}
+}
+
+/*end表格和图形编辑页面的样式**/
+
+.multiAxisLineSettingDialogBox {
+	width: 624px !important;
+	overflow: hidden;
+	height: 100% ;
+	background: #455a64 !important;
+
+	.line-div {
+		line-height: 5em;
+	}
+
+	& > div {
+		width: 100% !important;
+		height: 100%;
+		background-color: none !important;
+		background: none !important;
+
+		.multiAxisLineSettingDialogbodyBox {
+			padding: 0 !important;
+			overflow: visible !important;
+			background: #455a64 !important;
+		}
+		.multiAxisLineSettingDialogTitleBox {
+			width: 100% !important;
+			height: 64px !important;
+			line-height: 64px !important;
+			background-color: #37474f !important;
+			padding: 0 24px !important;
+			margin: 0 !important;
+			font-weight: normal !important;
+			font-size: 16px !important;
+			color: rgba(255, 255, 255, 0.87) !important;
+		}
+		.multiAxisLineSettingDialogBottomBox{
+			margin-bottom: 0px !important;
+			&>button:nth-child(1){
+				margin-right: 8px !important;
+			}
+		}
+		.multiAxisLineContainer {
+			width: 100% !important;
+			background-color: #455a64;
+			position: relative;
+
+			.multiAxisLineScrollBox {
+				position: relative;
+				width: 100%;
+				height: 100%;
+				padding: 24px 24px 0 24px;
+
+				.multiAxisLineYaxisContainer {
+					width: 100%;
+					height: 245px;
+					.multiAxisLineYaxis{
+						height: 217px;
+					}
+					.multiAxisLineYaxisTitle {
+						width: 100%;
+						height: 24px;
+						& > label {
+							width: 100%;
+							display: inline-block;
+							float: left;
+							font-size: 18px;
+							color: rgba(255, 244, 244, .54);
+							margin-right: 11px;
+						}
+					}
+					.multiAxisLineYaxis {
+						& > ul {
+							width: 100%;
+							height: auto;
+							list-style: none;
+
+							.multiAxisLineItemName {
+								width: 50%;
+								height: auto;
+								min-height: 20px;
+								float: left;
+							}
+							.multiAxisLineItemOption {
+								width: 25%;
+								height: 72px;
+								float: left;
+							}
+						}
+					}
+				}
+				.multiAxisLineIndexContainer {
+					width: 100%;
+					height: auto;
+					overflow: hidden;
+					.multiAxisLineIndexTitle {
+						width: 100%;
+						height: 34px;
+						& > label {
+							width: 100%;
+							display: inline-block;
+							float: left;
+							font-size: 18px;
+							height: 24px;
+							margin-top: 10px;
+							color: rgba(255, 244, 244, .54);
+						}
+					}
+
+					.multiAxisLineIndex {
+						& > ul {
+							width: 100%;
+							height: 72px;
+							list-style: none;
+
+							.multiAxisLineItemName {
+								width: 50%;
+								height: auto;
+								min-height: 20px;
+								float: left;
+							}
+							.multiAxisLineItemOption {
+								width: 25%;
+								height: auto;
+								min-height: 20px;
+								float: left;
+								.yAxisSelection{
+									 & > div{
+										 	div:nth-child(2){
+												width: 144px;
+												height: 45px;
+										    white-space: nowrap;
+										    overflow: hidden;
+										    text-overflow: ellipsis;
+											  padding-right: 20px  !important;
+											}
+									 }
+								}
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+}
+.yAxisDialog {
+	& > div > div > div {
+		width: 144px;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}
+.figureParent{
+	width: 93px !important;
+	& > div > div{
+		width: 93px !important;
+	}
+	.figureType{
+		font-size: 14px;
+	}
+}
+
+.aboutReportDialogBox {
+		width: 800px!important;
+    // height: 500px;
+    &>div {
+        width: 100%!important;
+        // height: 100%!important;
+        background-color: none!important;
+        background: none!important;
+
+        .aboutReportTitleBox {
+          width: 100% !important;
+          height: 64px !important;
+          line-height: 64px !important;
+          background-color: #37474f !important;
+          padding: 0 24px !important;
+          margin: 0 !important;
+          font-weight: normal !important;
+          font-size: 16px !important;
+          color: rgba(255,255,255,0.87) !important;
+        }
+
+        .aboutReportBodyBox {
+            width: 100% !important;
+            height: auto ;
+            padding: 0 !important;
+            background-color: #455a64;
+            position: relative;
+            // overflow: visible !important;
+
+            .aboutReportContaint {
+                width: 768px !important;
+                height: 100% !important;
+                padding-left: 16px !important;
+                padding-right: 16px !important;
+
+                .aboutReportHeader {
+                    width: 100% !important;
+                    height: 60px !important;
+                    border-bottom: #6a7b83 solid 2px;
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        padding-left: 24px;
+                        list-style: none;
+                    }
+                    ul li {
+                        width: 50%;
+                        height: auto;
+                        min-height: 20px;
+                        margin: 25px 0 25px;
+                        float: left;
+
+                        & > label {
+                            width: auto;
+                            display: inline-block;
+                            float: left;
+                            font-size: 18px;
+                            color: rgba(255, 244, 244, .54);
+                            margin-right: 11px;
+                        }
+                    }
+                }
+                .aboutReportList {
+                    width: 100% !important;
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        padding-left: 24px;
+                        list-style: none;
+                    }
+                    ul li {
+                        width: 50%;
+                        height: auto;
+                        min-height: 30px;
+                        margin: 7px 0 7px;
+                        float: left;
+
+                        & > label {
+                            width: 60px;
+                            display: inline-block;
+                            float: left;
+                            font-size: 14px;
+                            color: rgba(255, 244, 244, .54);
+                            margin-right: 11px;
+                        }
+
+                        &>span {
+                            display: inline-block;
+                            font-size: 14px;
+														float: left;
+														width: 261px;
+                            color: rgba(255, 244, 244, .87);
+												    word-break: break-all;
+                            &:nth-child(3){
+                                margin: 0 8px;
+                            }
+                        }
+
+                        .pathClassName{
+                            float: left;
+                            width: 250px;
+                            height: auto;
+                            &>span {
+                                height: 22px;
+                                line-height: 22px;
+                                display: inline-block;
+                                float: left;
+                                font-size: 14px;
+                                color: rgba(255, 244, 244, .87);
+                                &:nth-child(3){
+                                    margin: 0 0 0 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .aboutReportBottmBox {
+            width: 100%!important;
+            height: 52px!important;
+            line-height: 52px!important;
+            border-top: #6a7b83 solid 1px;
+            margin: 0!important;
+            padding: 0 16px 0 0 !important;
+            background-color: #455a64;
+            position: relative;
+            .createDir {
+                position: absolute!important;
+                left: 16px;
+                top: 7px;
+            }
+        }
+    }
+}
+
+.aboutReportDashboardDialogBox {
+  width: 1200px!important;
+  height: 500px;
+  &>div {
+    width: 100%!important;
+    // height: 100%!important;
+    background-color: none!important;
+    background: none!important;
+
+    .aboutReportTitleBox {
+      width: 100% !important;
+      height: 64px !important;
+      line-height: 64px !important;
+      background-color: #37474f !important;
+      padding: 0 24px !important;
+      margin: 0 !important;
+      font-weight: normal !important;
+      font-size: 16px !important;
+      color: rgba(255,255,255,0.87) !important;
+    }
+    .aboutReportBodyBox {
+      width: 100% !important;
+      height: auto ;
+      padding: 0 !important;
+      background-color: #455a64;
+      position: relative;
+      // overflow: visible !important;
+
+      .aboutReportContaint {
+        width: 100% !important;
+        height: 100% !important;
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+
+        .aboutReportHeader {
+          width: 100% !important;
+          height: 60px !important;
+          border-bottom: #6a7b83 solid 2px;
+          ul {
+            width: 100%;
+            height: auto;
+            padding-left: 24px;
+            list-style: none;
+          }
+          ul li {
+            width: 33%;
+            height: auto;
+            min-height: 20px;
+            margin: 25px 0 25px;
+            float: left;
+
+            & > label {
+              width: auto;
+              display: inline-block;
+              float: left;
+              font-size: 18px;
+              color: rgba(255, 244, 244, .54);
+              margin-right: 11px;
+            }
+          }
+        }
+        .aboutReportList {
+          width: 100% !important;
+          // height: 324px !important;
+
+          ul {
+            width: 100%;
+            height: auto;
+            padding-left: 24px;
+            list-style: none;
+          }
+          ul li {
+            width: 33%;
+            height: auto;
+            min-height: 30px;
+            margin: 7px 0 7px;
+            float: left;
+
+            & > label {
+              width: 80px;
+              display: inline-block;
+              float: left;
+              font-size: 14px;
+              color: rgba(255, 244, 244, .54);
+              margin-right: 11px;
+            }
+
+            &>span {
+							display: inline-block;
+							font-size: 14px;
+							float: left;
+							width: 261px;
+							color: rgba(255, 244, 244, .87);
+					    word-break: break-all;
+              &:nth-child(3){
+                margin: 0 8px;
+              }
+            }
+
+            .pathClassName{
+              float: left;
+              width: 250px;
+              height: auto;
+              &>span {
+                height: 22px;
+                line-height: 22px;
+                display: inline-block;
+                float: left;
+                font-size: 14px;
+                color: rgba(255, 244, 244, .87);
+                &:nth-child(3){
+                  margin: 0 0 0 8px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .aboutReportBottmBox {
+      width: 100%!important;
+      height: 52px!important;
+      line-height: 52px!important;
+      border-top: #6a7b83 solid 1px;
+      margin: 0!important;
+      padding: 0 16px 0 0 !important;
+      background-color: #455a64;
+      position: relative;
+      .createDir {
+        position: absolute!important;
+        left: 16px;
+        top: 7px;
+      }
+    }
+  }
+}
+/*start--报表编辑页面另存为的样式**/
+.saveAsDialogBox{
+	width: 424px!important;
+	height: 435px;
+	&>div{
+		width: 100%!important;
+		height: 100%!important;
+		background-color: none!important;
+		background:none!important;
+		.saveAsDialogTitleBox{
+			width: 100%!important;
+			height: 64px!important;
+			line-height: 64px!important;
+			background-color: #37474f!important;
+			padding: 0 24px !important;
+			margin: 0!important;
+			font-weight: normal!important;
+			font-size: 16px!important;
+			color: rgba(255,255,255,0.87) !important;
+		}
+		.addGoBack{
+			padding: 0 0 0 56px!important;
+		}
+		.saveAsDialogBodyBox{
+			width: 100%!important;
+			height: 319px!important;
+			padding:0!important;
+			background-color: #455a64;
+			position: relative;
+			overflow: visible !important;
+			.goBackDirList{
+				width: 24px;
+				height: 24px;
+				position: absolute;
+				left: 16px;
+				top: -45px;
+				&>button{
+					width: 24px!important;
+					height: 24px!important;
+					padding: 0!important;
+					margin: 0!important;
+				}
+			}
+			.dialogReportListComponent{
+				width: 100%;
+				height: 319px!important;
+				position: relative;
+				.titleText{
+					height: 72px;
+					color:#546e7a;
+					font-size: 14px;
+					color:rgba(255,255,255,0.87);
+					line-height: 72px;
+					border-bottom: #6a7b83 solid 1px;
+					.titleIcon{
+						float: left;
+						.titIcon{
+							color:#fff;
+							margin-left: 32px;
+						}
+
+					}	.titltxt{
+							float: left;
+							position: absolute;
+  							left: 80px;
+						}
+				}
+				.scrollBoxLinks{
+					padding:8px 0;
+					width: 100%;
+					height:247px;
+					overflow: hidden;
+					position: absolute;
+					left: 0;
+					top: 72px;
+					.scrollBoxs{
+						height: 100%;
+					}
+					.left-icon{
+						width: 40px !important;
+						height: 40px !important;
+						background-position: 8px -886px !important;
+						border-radius: 50%;
+   						background-color: #37474f !important;
+   						background: url("images/list_dashboard_icon.png") 0 0 no-repeat #37474f;
+   						margin-left: 20px !important;
+					}
+
+					.LinksListItem{
+						height: 60px !important;
+						&>div>div{
+							padding-left: 80px !important;
+							&>div{
+								color:rgba(255,255,255,0.87);
+								font-size: 14px;
+								margin-top: -6px;
+    							margin-bottom: 12px;
+
+							}
+						}
+
+					}
+					.textDashBox{
+						.textDashSpan{
+							max-width: 340px!important;
+							overflow: hidden!important;
+							white-space:nowrap;
+							.textName{
+								display:inline-block;
+								font-size: 12px;
+								color:rgba(255,255,255,0.54);
+							}
+							.textArrow{
+								margin:0 5px;
+							}
+						}
+						.textArrow{
+							color: rgba(255, 255, 255, 0.54);
+						}
+						span:first-child{
+							.textArrow{
+								margin:0 5px 0 0;
+							}
+						}
+					}
+				}
+				.scrollBoxSaveAs{
+					width: 100%;
+					height: 311px!important;
+					&>div{
+						&>div{
+							&>div{
+								padding: 0!important;
+								&>div{
+									&>span{
+										width: 100%!important;
+										height: 56px!important;
+										line-height: 56px!important;
+										font-size: 14px!important;
+										color: rgba(255,255,255,1)!important;
+										&>div{
+											padding: 0!important;
+											&>div{
+												padding: 0!important;
+												&>span{
+													margin: 0!important;
+													padding: 0!important;
+													width: 40px!important;
+													height: 40px!important;
+													line-height: 40px!important;
+													margin-top: 8px!important;
+													text-align: center;
+												}
+												&>span:nth-child(1){
+													border-radius: 50%;
+													background-color: #37474f!important;
+													color: #26c6da!important;
+													left: 24px!important;
+												}
+												&>span:nth-child(2){
+													color: #fff!important;
+													right: 24px!important;
+													text-align: right;
+												}
+												&>div{
+													width: 100%!important;
+													padding: 0 88px 0 88px !important;
+													overflow: hidden;
+													text-overflow: ellipsis;
+													white-space: nowrap;
+												}
+											}
+										}
+										&:hover{
+											background-color: #41535c!important;
+											color: #00e5ff!important;
+										}
+									}
+									&>div{
+										padding: 0!important;
+										background-color:rgba(221,225,227,0)!important;
+										font-size: 14px!important;
+										&>span.dialogIconClassName{
+											margin: 0!important;
+											padding: 0!important;
+											width: 40px!important;
+											height: 40px!important;
+											margin-top: 8px!important;
+											border-radius: 50%;
+											background-color: #37474f!important;
+											background: url("images/list_dashboard_icon.png") 0 -542px no-repeat;
+											left: 24px!important;
+											opacity:0.5;
+											filter:"alpha(opacity=50)";
+											-ms-filter:"alpha(opacity=50)"; /* 旧版IE */
+											&.list_BASE_icon {
+												background-position: 8px -661px;//基本表
+											}
+											&.list_Pie2D_icon {
+												background-position: 8px 10px;//饼图
+											}
+											&.list_PercentColumn2D_icon{// 百分百堆积柱状图
+											    background-position: 8px -1292px;
+											}
+											&.list_StackedColumn2D_icon{//堆积柱状图
+											    background-position: 8px -1351px;
+											}
+											&.list_Doughnut2D_icon {
+												background-position: 10px -1192px;//环图
+											}
+											&.list_TREE_icon {
+												background-position: 8px -494px;//树形表
+											}
+											&.list_FCMap_China2_icon {
+												background-position: 8px -830px;//地图
+											}
+											&.list_ScrollLine2D_icon {
+												background-position: 8px -382px;//折线图
+											}
+											&.list_HlinearGauge_icon {
+												background-position: 8px -710px;//kpi图二横
+											}
+											&.list_Pyramid_icon {
+												background-position: 9px -1242px;//金字塔图
+											}
+											&.list_ScrollArea2D_icon {
+												background-position: 8px -326px;//面积图
+											}
+											&.list_WordCloud_icon {
+												background-position: 8px -775px;//词云
+											}
+											&.list_CATEGORY_icon {
+												background-position: 8px -550px;//汇总表
+											}
+											&.list_ScrollColumn2D_icon {
+												background-position: 8px -45px;//柱形图
+											}
+											&.list_CROSS_icon {
+												background-position: 8px -606px;//交叉表
+											}
+											&.list_Pareto2D_icon {
+												background-position: 8px -270px;//帕累托图
+											}
+											&.list_AngularGauge_icon {
+												background-position: 8px -102px;//仪表盘
+											}
+											&.list_ScrollCombiDY2D_icon {
+												background-position: 8px -1000px;//双Y轴
+											}
+											&.list_Marimekko_icon {
+												background-position: 8px -214px;//矩阵图
+											}
+											&.list_dashboardIcon_icon{
+												background-position: 8px -886px;
+											}
+											&.list_EchartsMap_icon{//地图
+												background-position: 8px -830px;
+											}
+											&.list_MultiAxisLine_icon{ // 高级复合图
+												background-position: 8px -270px;
+											}
+											&.list_KPI_icon{ // KPI
+												background-position: 8px -1410px;
+											}
+										}
+										&>span.disabledLeftClassName{
+											margin: 0!important;
+											padding: 0!important;
+											width: 40px!important;
+											height: 40px!important;
+											margin-top: 8px!important;
+											border-radius: 50%;
+											background-color: #37474f!important;
+											background: url("images/list_dashboard_icon.png") 8px -1138px no-repeat;
+											left: 24px!important;
+											opacity:0.5;
+											filter:"alpha(opacity=50)";
+											-ms-filter:"alpha(opacity=50)"; /* 旧版IE */
+										}
+										&>span.disabledRightClassName{
+											background: none!important;
+											background-color: none!important;
+											line-height: 44px!important;
+											right: 12px!important;
+											text-align: center!important;
+											opacity:0.5;
+											filter:"alpha(opacity=50)";
+											-ms-filter:"alpha(opacity=50)"; /* 旧版IE */
+										}
+										&>div{
+											width: 100%!important;
+											height: 56px!important;
+											line-height: 56px!important;
+											padding: 0 0 0 88px !important;
+											background-color: none!important;
+											color: rgba(255,255,255,.26)!important;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.datasNullMessage{
+					width: 100%;
+					height: 319px;
+					line-height: 319px;
+					font-size: 14px;
+					color: rgba(255,255,255,.54);
+					text-align: center;
+				}
+			}
+		}
+		.saveAsDialogBottmBox{
+			width: 100%!important;
+			height: 52px!important;
+			line-height: 52px!important;
+			border-top: #6a7b83 solid 1px;
+			margin: 0!important;
+			padding: 0 16px 0 0 !important;
+			background-color: #455a64;
+			position: relative;
+			&>button:nth-child(1){
+				margin-right: 8px !important;
+			}
+			.createDir{
+				position: absolute!important;
+				left: 16px;
+				top: 7px;
+			}
+		}
+		.BottmBoxColor button:nth-child(2)  {
+			color:#04def7 !important;
+		}
+	}
+	// box-shadow: 0 0 16px #455a64;
+}
+/*end--报表编辑页面另存为的样式**/
+   
+
+ /*start--报表编辑页面另存为的样式**/
+ .saveAsDialogBoxKPI{
+ 	width: 524px !important;
+	overflow: hidden;
+  	height: 100% !important;
+	background: #455a64 !important;
+ 	.line-div{
+ 		// line-height:5em;
+ 		display: inline-block;
+ 		&>div:nth-child(1){
+			float: left;
+ 		}
+ 		&>div:nth-child(2){
+			float: left;
+ 		}
+ 		&>div:nth-child(3){
+			float: right;
+ 		}
+
+ 	}
+ 	&>div{
+ 		width: 100%!important;
+		height:100%;
+ 		background-color: none!important;
+ 		background:none!important;
+ 		.saveAsDialogTitleBox{
+ 			width: 100%!important;
+ 			height: 64px!important;
+ 			line-height: 64px!important;
+ 			background-color: #37474f!important;
+ 			padding: 0 24px !important;
+ 			margin: 0!important;
+ 			font-weight: normal!important;
+ 			font-size: 16px!important;
+ 			color: rgba(255,255,255,0.87) !important;
+ 		} 
+ 		.saveAsDialogBottmBoxKpi{
+ 			padding-bottom: 0px !important;
+ 			height: 533px !important;
+	 		.savebodyKpiview{
+	 			width: 100% !important;
+	 			background-color: #455a64;
+	 			position: relative;
+				.savebody{
+					height: 100%;
+					position: relative;
+				}
+				.scrollBoxKpi{
+					position: relative;
+					width: 100%;
+					height: 100% ;
+					&>div{
+						&>div{
+							&>div{
+								padding: 0!important;
+								&>div{
+									&>span{
+										width: 100%!important;
+										// height: 56px!important;
+										// line-height: 56px!important;
+										// font-size: 14px!important;
+										color: rgba(255,255,255,1)!important;
+										&>div{
+											padding: 0!important;
+											&>div{
+												padding: 0!important;
+												&>span{
+													margin: 0!important;
+													padding: 0!important;
+													width: 40px!important;
+													height: 40px!important;
+													line-height: 40px!important;
+													margin-top: 8px!important;
+													text-align: center;
+												}
+												&>span:nth-child(1){
+													border-radius: 50%;
+													background-color: #37474f!important;
+													color: #26c6da!important;
+													left: 24px!important;
+												}
+												&>span:nth-child(2){
+													color: #fff!important;
+													right: 24px!important;
+													text-align: right;
+												}
+												&>div{
+													width: 100%!important;
+													padding: 0 88px 0 88px !important;
+													overflow: hidden;
+													text-overflow: ellipsis;
+													white-space: nowrap;
+												}
+											}
+										}
+										// &:hover{
+										// 	background-color: #41535c!important;
+										// 	color: #00e5ff!important;
+										// }
+									}
+
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}
+// @media (min-width: 2880px){ 
+// 	  div.saveAsDialogBoxKPI { 
+// 	  	width: 1200px !important;
+// 	  	max-width:1200px !important;
+// 	  	.saveAsDialogTitleBox{
+// 	 		font-size: 12px !important;
+// 	 	}
+// 	 	&>div{	
+// 	 		&>div{
+// 	 			div{
+
+// 	 			}
+// 	 		}
+// 	 	}
+// 	  }
+// }	
+ 		// 	.dialogReportListComponent{
+ 		// 		width: 100%;
+ 		// 		height: 319px!important;
+ 		// 		position: relative;
+ 		// 		.titleText{
+ 		// 			height: 72px;
+ 		// 			color:#546e7a;
+ 		// 			font-size: 14px;
+ 		// 			color:rgba(255,255,255,0.87);
+ 		// 			line-height: 72px;
+ 		// 			border-bottom: #6a7b83 solid 1px;
+ 		// 			.titleIcon{
+ 		// 				float: left;
+ 		// 				.titIcon{
+ 		// 					color:#fff;
+ 		// 					margin-left: 32px;
+ 		// 				}
+			//
+ 		// 			}	.titltxt{
+ 		// 					float: left;
+ 		// 					position: absolute;
+   	// 						left: 80px;
+ 		// 				}
+ 		// 		}
+ 		// 		.scrollBoxLinks{
+ 		// 			padding:8px 0;
+ 		// 			width: 100%;
+ 		// 			height:247px;
+ 		// 			overflow: hidden;
+ 		// 			position: absolute;
+ 		// 			left: 0;
+ 		// 			top: 72px;
+ 		// 			.scrollBoxs{
+ 		// 				height: 100%;
+ 		// 			}
+ 		// 			.left-icon{
+ 		// 				width: 40px !important;
+ 		// 				height: 40px !important;
+ 		// 				background-position: 8px -886px !important;
+ 		// 				border-radius: 50%;
+    	// 					background-color: #37474f !important;
+    	// 					background: url("images/list_dashboard_icon.png") 0 0 no-repeat #37474f;
+    	// 					margin-left: 20px !important;
+ 		// 			}
+			//
+ 		// 			.LinksListItem{
+ 		// 				height: 60px !important;
+ 		// 				&>div>div{
+ 		// 					padding-left: 80px !important;
+ 		// 					&>div{
+ 		// 						color:rgba(255,255,255,0.87);
+ 		// 						font-size: 14px;
+ 		// 						margin-top: -6px;
+     // 							margin-bottom: 12px;
+			//
+ 		// 					}
+ 		// 				}
+			//
+ 		// 			}
+ 		// 			.textDashBox{
+ 		// 				.textDashSpan{
+ 		// 					max-width: 340px!important;
+ 		// 					overflow: hidden!important;
+ 		// 					white-space:nowrap;
+ 		// 					.textName{
+ 		// 						display:inline-block;
+ 		// 						font-size: 12px;
+ 		// 						color:rgba(255,255,255,0.54);
+ 		// 					}
+ 		// 					.textArrow{
+ 		// 						margin:0 5px;
+ 		// 					}
+ 		// 				}
+ 		// 				.textArrow{
+ 		// 					color: rgba(255, 255, 255, 0.54);
+ 		// 				}
+ 		// 				span:first-child{
+ 		// 					.textArrow{
+ 		// 						margin:0 5px 0 0;
+ 		// 					}
+ 		// 				}
+ 		// 			}
+ 		// 		}
+			//
+			//
+ 		// 		.datasNullMessage{
+ 		// 			width: 100%;
+ 		// 			height: 319px;
+ 		// 			line-height: 319px;
+ 		// 			font-size: 14px;
+ 		// 			color: rgba(255,255,255,.54);
+ 		// 			text-align: center;
+ 		// 		}
+ 		// 	}
+ 		
+ 	// 	.{
+ 	// 		width: 100%!important;
+ 	// 		height: 52px!important;
+ 	// 		line-height: 52px!important;
+ 	// 		border-top: #6a7b83 solid 1px;
+ 	// 		margin: 0!important;
+ 	// 		padding: 0 16px 0 0 !important;
+ 	// 		background-color: #455a64;
+ 	// 		position: relative;
+ 	// 		.createDir{
+ 	// 			position: absolute!important;
+ 	// 			left: 16px;
+ 	// 			top: 7px;
+ 	// 		}
+ 	// 	}
+ 	// 	.BottmBoxColor button:nth-child(2)  {
+ 	// 		color:#04def7 !important;
+ 	// 	}
+ 	
+ 	// box-shadow: 0 0 16px #455a64;
+ 
+/*end--报表编辑页面另存为的样式**/
+
+
+/* 计算列公式弹框**/
+.fx-dialog{
+	width:338px !important;
+	height:470px !important;
+	h2{
+		font-weight: normal;
+		font-size: 16px;
+		color:#feffff;
+	}
+	.fx-dialog-box{
+			width:290px;
+			height:422px;
+			position: relative;
+			.drawText{
+				padding-top: 28px;
+				.fx-meassage{
+					position: relative;
+					margin-top:30px;
+				}
+				.iconPrompt{
+				    right: 0;
+				    position: absolute !important;
+				    bottom: 10px;
+				    font-size: 24px !important;
+				    color: #f5344b!important;
+				    display: none !important;
+				}
+				.iconPromptTit{
+					top: 110px;
+					right: 0;
+				}
+				.showPrompt{
+					display: block !important;
+				}
+				&>span{
+					display: block;
+					color: #00e5ff;
+				}
+				.drawTextSpanError{
+					color:#f5344b!important;
+				}
+				&>div {
+					.inputBoxClassName{
+						height:48px!important;
+						&>div{
+							bottom: -1px!important;
+							color:#f5344b!important;
+							.hr-true{
+								border-color: rgb(0, 151, 167)!important;
+							}
+							.hr-error{
+								border-color:#f5344b!important;
+							}
+						}
+					}
+					&>div:nth-child(3){
+						position: absolute !important;
+	   					bottom: -13px !important;
+					}
+
+				}
+				.successText{
+					position:absolute;
+					font-size:12px;
+					bottom: 17px;
+					color: #0be148 !important;
+					display: none;
+				}
+				.textTrue{
+					display: block;
+				}
+			}
+			.drawTextFx{
+				margin-top:80px;
+			}
+		.fx-btn{
+			width: 100%;
+			height: 44px!important;
+			position: absolute;
+			bottom: -24px;
+			left: -10px;
+			&>button{
+				font-size: $pixel-14px!important;
+				//color: #eff0f1 !important;
+				position: absolute!important;
+			}
+			&>button:nth-child(1){
+				left: 8px !important;
+			}
+			&>button:nth-child(2){
+				left: 116px !important;
+			}
+			&>button:nth-child(3){
+				right: -10px !important;
+			}
+
+			.dialogHoverClassName{
+				color: #00e5ff!important;
+			}
+		}
+		
+	}
+	
+}
+.fi-dialog{
+	width:338px !important;
+	height:304px !important;
+	h2{
+		font-weight: normal;
+		font-size: 16px;
+		color:#feffff;
+	}
+		
+	.fi-popover-box{
+		position: relative;
+		width:290px;
+		height:256px;
+		.drawcont{
+			// padding:23px 23px 0 23px!important;
+			width:100%;
+			position: absolute;
+			left:0;
+			top:0;
+		}
+		
+		.fi-btn{
+			width: 100%;
+			height: 44px!important;
+			position: absolute;
+			bottom: -22px;
+			left: 0;
+			&>button{
+				font-size: $pixel-14px!important;
+				position: absolute!important;
+			}
+			&>button:nth-child(1){
+				left: 95px !important;
+			}
+			&>button:nth-child(2){
+				right: 8px !important;
+			}
+		}
+	}
+}
+.zhibiao-formater{
+	margin-top: 30px;
+	.formater-tit{
+		
+	}
+	.xtext-panel{
+		margin-top: 35px;
+		.xtext-input{
+			&>input{
+				text-align: center;
+			}
+		}
+	}
+	
+	
+}
+/*start表格和图形列表右侧预览的页面的样式**/
+.right-drawer {
+	width: 100%;
+	height: 100%;
+	.reportRightShowBox {
+		width: 100%;
+		height: 100%;
+		background-color: #465962;
+		overflow: hidden;
+
+		.top-bar {
+			width: 100%;
+			height: 24px;
+			background-color: #263238 !important;
+		}
+		.appBarClassName {
+			width: 100%;
+			min-height: 58px !important;
+			padding-left: 16px !important;
+			padding-right: 16px !important;
+			background-color: #37474f !important;
+			position: relative;
+			&>div{
+				width: 24px!important;
+				height:58px!important;
+				margin: 0!important;
+				position: absolute;
+				left: 24px;
+				&>button{
+					padding:0!important;
+					width: 24px!important;
+					height: 58px!important;
+					&.rightIconClassName{
+						margin-top: 10px!important;
+						font-size: 16px!important;
+					}
+				}
+			}
+			.iconStyle {
+				width: 24px;
+				height: 24px;
+				background: url("images/list_dashboard_icon.png") 0 -542px no-repeat;
+				margin-top: 0;
+				margin-right: 0;
+			}
+			.list_BASE_icon {
+				//基本表
+				background-position: 0 -669px;
+			}
+			.list_Pie2D_icon {
+				//饼图
+				background-position: 0 3px;
+			}
+			.list_Doughnut2D_icon {
+				//环图
+				background-position: 0 -1183px;
+			}
+			.list_text_icon {
+				background-position: 8px -1138px;
+			}
+			.list_Column2D_icon {
+				background-position: 7px -47px;
+			}
+			.list_AngularGauge_icon {
+				background-position: 0 -92px;
+			}
+			.list_Funnel_icon {
+				background-position: 8px -159px;
+			}
+			.list_Marimekko_icon {
+				background-position: 0 -204px;
+			}
+			.list_Pareto2D_icon {
+				background-position: 0 -262px;
+			}
+			.list_StackedArea2D_icon {
+				background-position: 8px -327px;
+			}
+			.list_Line_icon {
+				background-position: 7px -384px;
+			}
+			.list_Area2D_icon {
+				background-position: 7px -440px;
+			}
+			.list_CROSS_icon {
+				background-position: 0 -614px;
+			}
+			.list_CATEGORY_icon {
+				background-position: 0 -557px;
+			}
+			.list_WordCloud_icon {
+				background-position: 0 -785px;
+			}
+			.list_ScrollColumn2D_icon {
+				background-position: 0 -54px;
+			}
+			.list_ScrollCombiDY2D_icon {
+				background-position: 0 -992px;
+			}
+			.list_TREE_icon {
+				//树形表
+				background-position: 0 -500px;
+			}
+			.list_EchartsMap_icon {
+				//地图
+				background-position: 0 -838px;
+			}
+			.list_ScrollLine2D_icon {
+				//折线图
+				background-position: 0 -382px;
+			}
+			.list_HlinearGauge_icon {
+				//kpi图二横
+				background-position: 0 -710px;
+			}
+			.list_Pyramid_icon {
+				//金字塔图
+				background-position: 0 -1232px;
+			}
+			.list_ScrollArea2D_icon {
+				//面积图
+				background-position: 2px -318px;
+			}
+			.list_PercentColumn2D_icon {
+				//百分百堆积图
+				background-position: 0 -1299px;
+			}
+			.list_StackedColumn2D_icon {
+				//百分百堆积图
+				background-position: 0 -1357px;
+			}
+			.list_KPI_icon {
+				//百分百堆积图
+				background-position: 0 -1410px;
+			}
+			.list_MultiAxisLine_icon {
+				// 高级复合图
+				background-position: 0 -278px;
+			}
+			/* &>button {
+				width: auto !important;
+				margin: 0 !important;
+				padding: 0 !important;
+				border: 0 !important;
+				margin-right: 16px !important;
+
+				div {
+					span {
+						margin-right: 0 !important;
+					}
+				}
+			} */
+			&>h1 {
+				line-height: 58px !important;
+				font-size: 16px !important;
+				font-weight: normal !important;
+				color: rgba(255,255,255,.87)!important;
+				position: absolute;
+				left: 80px;
+			}
+		}
+		.scrollBox {
+			width: 100%;
+			height: auto;
+			.scrollBoxReportShow {
+				// height: 525px !important;
+
+				.reportRightShowBoxView {
+					width: 100%;
+					height: 344px;
+					float: left;
+					padding: 8px 8px 8px 8px;
+					overflow: hidden;
+					.chartPanel {
+						width: 100%;
+						height: 100%;
+						border-radius: 2px;
+						background-color: #fff !important;
+						position: relative;
+					}
+					.loadingBox{
+						width: 100%;
+						height: 100%;
+						position: relative;
+					    background: #fff;
+    					border-radius: 2px;
+					}
+					.table-view {
+						width: 100%;
+						height: 100%;
+						background-color: #fff;
+						border-radius: 2px;
+						padding-top: 0;
+						.table-context {
+							width: 100%;
+							height: 100%;
+							padding-bottom: 0;
+							position: relative;
+							.noGetReportError{
+								margin-left: -38px;
+							}
+							.table-gundong {
+								width: 100%;
+								height: 100%;
+
+								.table-container {
+									width: 100%;
+									height: 100%;
+
+									&>table {
+										width: 100%;
+										height: auto;
+										.stat_row_td{
+											color:rgba(3,169,244,0.87) !important;
+										}
+										.stat_row_tdTOTAL{
+											color:rgba(3,169,244,0.87) !important;
+											font-weight: bold;
+										}
+										td {
+											height: 48px;
+											line-height: 48px;
+											border-bottom: #dcdcdc solid 1px;
+
+											span {
+												white-space: nowrap;
+												padding: 0 0 0 32px;
+											}
+										}
+										&>thead tr td {
+											color: rgba(0, 0, 0, .56);
+											font-size: 12px;
+											height: 55px;
+											line-height: 55px;
+											span:nth-child(2) {
+												width: 16px;
+												height: 18px;
+												line-height: 16px;
+												padding: 0;
+												display: inline-block;
+												font-size: 16px;
+												transform: rotate(90deg);
+												-ms-transform: rotate(90deg); 	/* IE 9 */
+												-moz-transform: rotate(90deg); 	/* Firefox */
+												-webkit-transform: rotate(90deg); /* Safari 和 Chrome */
+												-o-transform: rotate(90deg); 	/* Opera */
+												color: rgba(0, 0, 0, .56);
+												opacity: 0;
+												cursor: pointer;
+											}
+											span.downIcon {
+												width: 16px;
+												height: 14px;
+												line-height: 16px;
+												transform: rotate(-90deg);
+												-ms-transform: rotate(-90deg); 	/* IE 9 */
+												-moz-transform: rotate(-90deg); 	/* Firefox */
+												-webkit-transform: rotate(-90deg); /* Safari 和 Chrome */
+												-o-transform: rotate(-90deg); 	/* Opera */
+											}
+											&:hover span {
+												color: rgba(0, 0, 0, .87);
+												opacity: 1;
+											}
+										}
+										&>tbody tr td {
+											color: rgba(0, 0, 0, .87);
+											font-size: 13px;
+											transition: background .5s;
+											-moz-transition: background .5s;
+											-webkit-transition: background .5s;
+											-ms-transition: background .5s;
+										}
+										&>tbody tr:hover td {
+											// background-color: #eee;
+											color: #03a9f4;
+										}
+									}
+									.msg_position {
+										position: absolute;
+										left: 50%;
+										top: 50%;
+										margin-top: -8px;
+										margin-left: -54px;
+									}
+								}
+							}
+						}
+					}
+					&>h2.titleClassName {
+						font-size: 16px !important;
+						font-weight: normal !important;
+					}
+				}
+				.reportRightCharShowBoxView {
+					width: 100%;
+					height: 344px;
+					float: left;
+					padding: 8px;
+					.chartPanel {
+						width: 100%;
+						height: 100%;
+						border-radius: 2px;
+						background-color: #fff !important;
+						position: relative;
+						.chart-container {
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.msg_box {
+						width: 100%;
+						height: 100%;
+						border-radius: 2px;
+						background-color: #fff !important;
+						position: relative;
+
+						.msg_position {
+							position: absolute;
+							left: 50%;
+							top: 50%;
+							width: 132px;
+							height: 16px;
+							line-height: 16px;
+							margin-top: -8px;
+							margin-left: -62px;
+						}
+					}
+				}
+				.reportRightShowBoxTextDesc {
+					width: 100%;
+					height: auto;
+					float: left;
+					padding-bottom: 0px;
+
+					ul {
+						width: 100%;
+						height: auto;
+						padding-left: 24px;
+						list-style: none;
+					}
+					ul li {
+						width: 100%;
+						height: auto;
+						min-height: 20px;
+						margin: 7px 0 7px;
+						float: left;
+
+						&>label {
+							width: 45px;
+							display: inline-block;
+							float: left;
+							font-size: 14px;
+							color: rgba(255, 244, 244, .54);
+							margin-right: 11px;
+						}
+						&>span {
+							display: inline-block;
+							font-size: 14px;
+							color: rgba(255, 244, 244, .87);
+							&:nth-child(3){
+								margin: 0 8px;
+							}
+						}
+						.pathClassName{
+							float: left;
+							width: 250px;
+							height: auto;
+							&>span {
+								height: 22px;
+								line-height: 22px;
+								display: inline-block;
+								float: left;
+								font-size: 14px;
+								color: rgba(255, 244, 244, .87);
+								&:nth-child(3){
+									margin: 0 0 0 8px;
+								}
+							}
+						}
+					}
+				}
+			}
+			.reportRightShowBoxAuthority{
+				font-size: 14px;
+			    color: rgba(255, 244, 244, 0.54);
+				border-top: 1px solid #61737b;
+				h2{
+					margin-top: 18px;
+					font-size: 14px;
+					margin-left: 24px;
+					font-weight: normal;
+					margin-bottom: 5px;
+
+				}
+				ul{width: 100%; height: auto; padding-bottom: 10px;}
+				ul li{
+					display: inline-block;
+					width: 100%;
+					list-style:none;
+					margin:10px 0 0 0;
+					label{
+						float: left;
+						margin-left: 24px;
+						margin-right: 40px;
+
+					}
+					.authorityName{
+						float: left;
+						color: rgba(255, 244, 244, 0.87) !important;
+
+					}
+					.openAuthority{
+						margin-right: 24px;
+						float: right;
+					}
+				}
+			}
+			#mCSB_2_container{
+				height: auto;
+				//background: red;
+			}
+		}
+		.reportRightShowBoxBotton {
+				width: 100%;
+				border-top: 1px solid #61737b;
+				height: 40px;
+				position: fixed;
+				z-index: 9999;
+
+				&.dashboardBoxBtn {
+					li {
+						min-width:108px!important;
+					}
+				}
+				ul {
+					width: 100%;
+					height: 40px;
+					padding-left:8px;
+					list-style: none;
+				}
+				ul li {
+					min-width: 88px;
+					height: 40px;
+					float: left;
+					margin-right: 14px;
+					position: relative;
+				}
+				& span {
+					// color: rgba(1, 1, 1, .87) !important;
+					font-size: 14px !important;
+				}
+				.lookReportBtn {
+					width: 92px !important;
+					height: 32px !important;
+					background-color: #fff !important;
+				}
+				.editReportBtn {
+					margin-top: 8px !important;
+					position: absolute !important;
+					left: 0 !important;
+					div span {
+						color: #04def7 !important;
+
+					}
+					&>:hover{
+						background-color: rgba(0,229,255,0.14902) !important;
+
+					}
+				}
+
+				.setAuthorityBtn {
+					position: absolute !important;
+					left: 0 !important;
+					div span {
+						color: #04def7 !important;
+					}
+				}
+				.useReportBtn {
+					// margin-left: 16px !important;
+					position: absolute !important;
+					left: 0 !important;
+					margin-top: 8px !important;
+					div span {
+						color: #04def7 !important;
+					}
+					&>:hover{
+						background-color: rgba(0,229,255,0.14902) !important;
+
+					}
+				}
+			}
+	}
+}
+
+/*end表格和图形列表右侧预览的页面的样式**/
+.matadata-panel {
+	position: absolute;
+	z-index: 999;
+	right: 254px;
+	top: -31px;
+	// margin: 16px 126px 0 0;
+
+	.btn {
+		background: #00e5ff !important;
+	}
+	.matadata-btn {
+		color: #fff;
+	}
+}
+.top-bar{
+	width: 100%;
+    height: 24px;
+    background-color: #263238 !important;
+}
+.metatada-selector-box{
+	.head{
+
+		width: 100%;
+		height: 82px;
+
+		.cateSelect {
+			width: 100%;
+			position: relative;
+
+			.matadata-select {
+				margin: 5px 0 0 0;
+				font-size: 16px !important;
+
+				div {
+					color: #fff !important;
+					border: 0 !important;
+				}
+			}
+		}
+		// .matadata-back {
+		// 	margin: 17px 0 0 8px;
+
+		// 	span {
+		// 		color: #fff !important;
+		// 	}
+		// }
+		// .top {
+		// 	height: 24px;
+		// 	background: #263238 !important;
+		// }
+		.metadata-tit{
+			height:100%;
+			font-size:16px;
+			color:#fff;
+			text-align:center;
+			line-height:82px;
+		}
+		.back-box{
+			float: left;
+			width: 45px;
+			.headerIconClassName{
+			    margin: 0 !important;
+			    padding: 0 !important;
+			    width: 45px !important;
+			    height: 40px !important;
+			    line-height: 40px !important;
+			    border-radius: 50%;
+			    color: #fff !important;
+			    text-align: center;
+			    font-size: 24px !important;
+			    left: 10px !important;
+			    position: absolute !important;
+			    top: 33px;
+			}
+		}
+		.name-box{
+			height: 100%;
+			width:70%;
+			font-size:16px;
+			color:#fff;
+			line-height: 56px;
+			margin-left:67px;
+		}
+	}
+}
+.matadata {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding-top: 88px;
+	overflow:hidden;
+
+
+	.content {
+		float: left;
+		width: 100%;
+		height: calc(100% - 80px);
+		padding-top: 8px;
+		overflow: hidden !important;
+
+		.matadataContentList {
+			background: #465962 !important;
+
+			span {
+				font-size: 14px !important;
+
+			}
+			p span {
+				color: #b9bec1 !important;
+			}
+			a {
+				&:hover {
+					div {
+						color: #0ad6ef !important;
+					}
+					p span {
+						color: #0ad6ef !important;
+					}
+					i {
+						color: #00e6fe !important;
+					}
+				}
+				i {
+					font-size: 24px;
+					color: #aab4b6 !important;
+					line-height: 28px;
+				}
+			}
+			div {
+				// color: #d3d6d7 !important;
+				height: 56px;
+				// &>span{
+				// 	margin: 0!important;
+				// 	padding: 0!important;
+				// 	width: 40px!important;
+				// 	height: 40px!important;
+				// 	line-height: 40px!important;
+				// 	// margin-top: 8px!important;
+				// 	// text-align: center;
+				// }
+
+					div {
+
+						div {
+							span{
+								top:9px !important;
+							}
+
+							span:nth-child(1){
+								margin: 0!important;
+								padding: 0!important;
+								width: 45px!important;
+								height: 40px!important;
+								line-height: 40px!important;
+								border-radius: 50%;
+								// background-color: #37474f!important;
+								color: #26c6da!important;
+								text-align: center;
+								font-size: 24px !important;
+								left:10px!important;
+							}
+							span:nth-child(2){
+								color: #fff!important;
+								right: 7px!important;
+								text-align: right;
+							}
+							padding: 0 !important;
+							padding-left: 67px !important;
+							padding-top: 11px !important;
+
+							i.listIconClassName {
+								top: 21px !important;
+								left: 20px !important;
+								font-size: 24px !important;
+								color:#26c6da !important;
+							}
+							div {
+								margin: 0 !important;
+								padding: 0 !important;
+								height: auto !important;
+								height: 24px;
+								line-height: 24px;
+								margin-top: 6px !important;
+								&:nth-child(2) {
+									width: 200px;
+									font-size: 14px !important;
+									color: rgba(255, 255, 255, .54) !important;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+								}
+								&:nth-child(3) {
+									width: 200px;
+									color: rgba(255, 255, 255, .54) !important;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									margin-left:10 !important;
+								}
+							}
+						}
+					}
+
+				span:hover {
+					div {
+						div {
+							i.listIconClassName {
+								color: #00e5ff !important;
+							}
+							&:nth-child(2) {
+								color: #00e5ff !important;
+							}
+							&:nth-child(3) {
+								color: rgba(0, 229, 255, .87) !important;
+							}
+						}
+					}
+				}
+			}
+		}
+		.matadata-content {
+			box-shadow: none !important;
+			background: transparent !important;
+
+			/* div {
+				color: #b9bec1 !important;
+				line-height: 22px;
+			} */
+
+			/* i {
+				font-size: 24px;
+				position: relative;
+				top: 12px;
+			} */
+
+			/* span {
+				color: #fff !important;
+			} */
+			&>dl {
+				width: 100%;
+				padding: 24px;
+				height: 50px;
+
+				dt {
+					width: 24px;
+					float: left;
+
+					i {
+						font-weight: normal;
+						font-size: 24px;
+						top: 0;
+						color: rgba(255, 255, 255, .56);
+					}
+				}
+				dd {
+					width: 180px;
+					float: left;
+					padding-left: 20px;
+					h2 {
+						font-weight: normal;
+						font-size: 14px;
+						color: rgba(255, 255, 255, .87);
+						line-height: 25px;
+						width: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					p {
+						width: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+						font-size: 12px;
+						color: rgba(255, 255, 255, .54);
+					}
+				}
+			}
+			.metaDataDescBox {
+				font-size: 12px;
+				color: rgba(255, 255, 255, .54);
+				padding: 0 24px;
+
+				p {
+					line-height: 25px;
+				}
+			}
+			.cardMatadata {
+				padding: 0 24px;
+
+				.cardMatadataBox {
+					width: 100%;
+					margin-top: 26px;
+
+					.spanClassName {
+						width: 100%;
+						line-height: 24px;
+
+						span {
+							display: inline-block;
+							margin-right: 12px;
+							font-size: 12px;
+							color: rgba(255, 255, 255, .54);
+						}
+					}
+					h2 {
+						font-weight: normal;
+						font-size: 14px;
+						color: rgba(255, 255, 255, .67);
+					}
+				}
+			}
+		}
+		.matadata-submit-panel {
+			position: relative;
+			width: 100%;
+			height: 36px;
+			margin-top: 8px;
+
+			.matadata-submit-btn {
+				margin-right: 16px !important;
+				position: absolute !important;
+				right: 0 !important;
+				color: #04def7 !important;
+			}
+		}
+	}
+}
+.matadata-select-item {
+	color: #edeeef !important;
+
+	&:hover {
+		color: #00e5ff !important;
+	}
+}
+.matadata-select-item-default{
+	font-size: 12px !important;
+}
+.report-tabs {
+	height: 100%;
+	background: #546e7a !important;
+
+	.tab-content {
+		background: #455a64 !important;
+		position: relative;
+		z-index: 1;
+		box-shadow: none !important;
+
+		div {
+			box-shadow: none !important;
+		}
+	}
+	div:first-child {
+		box-shadow: 0 1px 2px #24353e;
+		position: relative;
+		z-index: 2;
+	}
+	.tab {
+		box-shadow: none !important;
+	}
+}
+.set-panel {
+	.panel {
+		position: fixed;
+		bottom: 32px;
+		z-index: 9;
+	}
+	.sbtn-panel {
+		left: 40%;
+	}
+	.gbtn-panel {
+		left: 50%;
+	}
+	.ibtn-panel {
+		left: 60%;
+	}
+	button.sbtn {
+		background: #0089d1 !important;
+	}
+	button.gbtn {
+		background: #00976c !important;
+	}
+	button.ibtn {
+		background: #607d8b !important;
+	}
+}
+
+.showPopoverCol{
+.hidePrimaryCol{
+	display: none;
+    
+    position: fixed;
+    font-size: 14px;
+}
+
+	.weidu-layer-Col{
+		position: fixed;
+	    z-index: 999;
+	    width: 100%;
+	    height: 100%;
+	    left: 0;
+	    top: 0;
+	    display: none;
+	}
+
+
+	.show-layer{
+	    display: block;
+
+	}
+
+	.weidu-popover-colList{
+		display: none;
+		position: fixed;
+		z-index: 99999;
+		bottom: 25px;
+		height: 32px;
+		border-radius:16px;
+		transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+		-moz-transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+		-webkit-transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+		-ms-transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+		background:#fff !important;
+		overflow: hidden;
+		padding: 8px 0!important;
+		&.show-popover{
+			display: block;
+		}
+		&.hideAnimate{
+			height: 32px;
+			bottom: 25px;
+		}
+		&.animate{
+			box-shadow: 0 1px 2px #24353e;
+			border-radius: 0;
+			bottom: 25px;
+		
+		}
+		.wei-popover-item{
+			position: relative;
+			//display: block;
+			&.itemShow{
+				display: block;
+			}
+			.item-bg{
+				position: absolute;
+				z-index: 9;
+				top: 8px;
+				left: 10px;
+				width: 32px;
+				height: 32px;
+				border-radius: 16px;
+				background-color: #2baf2b;
+				.item-bg-img{
+					width: 24px;
+					height: 24px;
+					background-image: url(images/weidu.png);
+					margin: 3px 4px;
+				}
+			}
+			&>div:nth-child(2){
+				&>span{
+					&>div{
+						&>div{
+							padding-left: 72px!important;
+							&>div{
+								color: #767676!important;
+								font-size: 14px!important;
+							}
+						}
+					}
+				}
+				&>span:hover{
+					background-color: #ebebeb!important;
+				}
+			}
+
+		}
+
+	}
+
+}
+.showPopover{
+.hidePrimary{
+	display: none;
+    
+    position: fixed;
+    font-size: 14px;
+}
+
+	.weidu-layer{
+		position: fixed;
+	    z-index: 999;
+	    width: 100%;
+	    height: 100%;
+	    left: 0;
+	    top: 0;
+	    display: none;
+	}
+
+
+	.show-layer{
+	    display: block;
+
+	}
+
+	.weidu-popover{
+		display: none;
+		position: fixed;
+		z-index: 99999;
+		bottom: 25px;
+		height: 32px;
+		border-radius:16px;
+		transition: width .6s, height .6s, border-radius .6s, background .6s, bottom .6s, left .6s;
+		-moz-transition: width .6s, height .6s, border-radius .6s, background .6s, bottom .6s, left .6s;
+		-webkit-transition: width .6s, height .6s, border-radius .6s, background .6s, bottom .6s, left .6s;
+		-ms-transition: width .6s, height .6s, border-radius .6s, background .6s, bottom .6s, left .6s;
+		background:#fff !important;
+		overflow: hidden;
+		padding: 8px 0!important;
+		&.show-popover{
+			display: block;
+		}
+		&.hideAnimate{
+			height: 32px;
+			bottom: 25px;
+		}
+		&.animate{
+			box-shadow: 0 1px 2px #24353e;
+			border-radius: 0;
+			bottom: 25px;
+		}
+		&.d{
+
+		}
+		.wei-popover-item{
+			position: relative;
+			//display: block;
+			&.itemShow{
+				display: block;
+			}
+			.item-bg{
+				position: absolute;
+				z-index: 9;
+				top: 8px;
+				left: 10px;
+				width: 32px;
+				height: 32px;
+				border-radius: 16px;
+				background-color: #2baf2b;
+				.item-bg-img{
+					width: 24px;
+					height: 24px;
+					background-image: url(images/weidu.png);
+					margin: 3px 4px;
+				}
+			}
+			&>div:nth-child(2){
+				&>span{
+					&>div{
+						&>div{
+							padding-left: 72px!important;
+							&>div{
+								color: #767676!important;
+								font-size: 14px!important;
+							}
+						}
+					}
+				}
+				&>span:hover{
+					background-color: #ebebeb!important;
+				}
+			}
+
+		}
+
+	}
+
+}
+.set-drawer {
+	position: fixed;
+	z-index: 1000;
+	bottom: 32px;
+	width: 56px;
+	height: 56px;
+	border-radius: 38px;
+	display: none;
+	transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+	-moz-transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+	-webkit-transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+	-ms-transition: width .5s, height .5s, border-radius .5s, background .5s, bottom .5s, left .5s;
+
+	&.sdrawer {
+		left: 40%;
+		background: #0288d1;
+		display: block;
+	}
+	&.gdrawer {
+		left: 50%;
+		background: #00976c;
+		display: block;
+	}
+	&.idrawer {
+		left: 60%;
+		background: #607d8b;
+		display: block;
+	}
+	&.show {
+		box-shadow: 0 1px 2px #24353e;
+		height: 248px;
+		left: 0 !important;
+		width: 100%;
+		border-radius: 0;
+		bottom: 0;
+		background: rgba(84, 110, 122, 0.87);
+	}
+	&.hide div {
+		display: none;
+	}
+	.filter-empty-bg{
+		position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    color: #78909c;
+    margin-left: -55px;
+    margin-top: 4px;
+	}
+	.noDataMessageText {
+		width: 100%;
+    height: 30px;
+    top: 50%;
+    position: absolute;
+    margin-left: 65px;
+    font-size: 16px;
+    text-align: center;
+    color: #78909c;
+	}
+}
+.set-drawer-layer {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+	background-color: rgba(0, 0, 0, .5);
+
+	&.show {
+		display: block;
+	}
+}
+
+.set-weidu-panel {
+	position: relative;
+
+	.prev {
+		background: #455a64;
+		color: #fff;
+		cursor: pointer;
+		display: none;
+		height: 100%;
+		line-height: 40px;
+		position: absolute;
+		left: 0;
+		text-align: center;
+		top: 0;
+		width: 24px;
+		z-index: 9999;
+		opacity: .8;
+	}
+	.next {
+		background: #455a64;
+		color: #fff;
+		cursor: pointer;
+		display: none;
+		height: 100%;
+		line-height: 40px;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 24px;
+		z-index: 9999;
+		opacity: .8;
+	}
+	.zhibiao-items {
+		.next {
+			top: -4px;
+		}
+		.prev {
+			top: -4px;
+		}
+	}
+	.weidu-items {
+		.next {
+			top: -4px;
+		}
+		.prev {
+			top: -4px;
+		}
+	}
+	.hover-items {
+		&:hover {
+			.prev {
+				display: block;
+			}
+			.next {
+				display: block;
+			}
+		}
+	}
+	.right-panel {
+		width: 48px;
+		height: 100%;
+		position: absolute;
+		right: 0;
+		z-index: 999999;
+		background: #526c77;
+	}
+	.zhibiaolist {
+		position: relative;
+		z-index: 2;
+		padding: 0 48px 0px 48px;
+
+		.zhibiao-panel {
+			position: relative;
+		}
+	}
+	.weidulist {
+		position: relative;
+		z-index: 2;
+		padding: 2px 48px 0 48px;
+
+		.weidu-panel {
+			position: relative;
+		}
+	}
+	.weiduTable {
+		display: inline-block;
+		width: 50%;
+		position: relative;
+
+		label {
+			left: 16px;
+		}
+	}
+	.zhibiao-select-panel {
+		position: relative;
+		margin-left: 115px;
+		background: #455a64;
+		height: 40px;
+		margin-right: 48px;
+		z-index: 1000;
+	}
+	.panel {
+		background: #455a64;
+		height: 40px;
+		padding: 0;		/*border-radius: 20px;*/
+		margin-left: 88px;
+	}
+	.zhibiao-List {
+		padding: 4px;
+		width: 100%;
+		height: 40px;
+		position: relative;
+		overflow: hidden;
+
+		.items {
+			position: relative;
+			left: 0;
+			height: 32px;
+		}
+	}
+	.weidu-List {
+		padding: 4px;
+		width: 100%;
+		height: 40px;
+		position: relative;
+		overflow: hidden;
+
+		.items {
+			position: relative;
+			left: 0;
+			height: 32px;
+		}
+	}
+	label {
+		position: absolute;
+		color: #fff;
+		line-height: 40px;
+		left: 48px;
+	}
+	.setlist {
+		position: relative;
+		margin: 18px 0 15px 20px;
+		z-index:2;
+
+		.select {
+			position: absolute;
+			top: -8px;
+			z-index: 888;
+
+			div {
+				border: none !important;
+			}
+		}
+		.selectLabel {
+			position: absolute;
+			top: -8px;
+			width: 80px;
+			height: 30px;
+			line-height: 48px;
+			color: #fff;
+			text-indent: 28px;
+			z-index: 1002;
+		}
+		.label-panel {
+			position: absolute;
+			left: -20px;
+			top: 0;
+			height: 40px;
+			width: 135px;
+			background: #526c77;
+			z-index: 1001;
+		}
+		.left-panel {
+			position: absolute;
+			z-index: 998;
+			left: 0;
+			top: 0;
+			height: 40px;
+			width: 100px;
+			background: #455a64;
+		}
+		.select-panel {
+			margin-left: 110px;
+			height: 32px;
+			margin: 4px 4px 4px 98px;
+			position: relative;
+			padding-top: 4px;
+			position: relative;
+			z-index: 997;
+
+			.select-scroll {
+				position: relative;
+				width: 100%;
+
+				.select-items {
+					width: 100%;
+					height: 32px;
+					display: none;
+					position: relative;
+				}
+				&.weidu {
+					.weidu {
+						display: block;
+					}
+				}
+				&.heji {
+					.heji {
+						display: block;
+					}
+				}
+				&.pingjun {
+					.pingjun {
+						display: block;
+					}
+				}
+				&.max {
+					.max {
+						display: block;
+					}
+				}
+				&.min {
+					.min {
+						display: block;
+					}
+				}
+				&.jishu {
+					.jishu {
+						display: block;
+					}
+				}
+				&.zhibiao {
+					.zhibiao {
+						display: block;
+					}
+				}
+				&.jisuanlie {
+					.jisuanlie {
+						display: block;
+					}
+				}
+				&.weidujishu {
+					.weidujishu {
+						display: block;
+					}
+				}
+				.weidu {
+					display: block;
+				}
+				.zhibiao-items {
+					position: relative;
+					height: 40px;
+					overflow: hidden;
+					width: 100%;
+				}
+				.weidu-items {
+					position: relative;
+					overflow: hidden;
+					height: 40px;
+					width: 100%;
+				}
+				.zhibiao-items-panel {
+					position: relative;
+					width: 200%;
+					left: 0;
+					transition: left .3s;
+					-moz-transition: left .3s;
+					-webkit-transition: left .3s;
+					-ms-transition: left .3s;
+				}
+				.weidu-items-panel {
+					position: relative;
+					width: 200%;
+					left: 0;
+					transition: left .3s;
+					-moz-transition: left .3s;
+					-webkit-transition: left .3s;
+					-ms-transition: left .3s;
+				}
+			}
+		}
+	}
+
+	.item-copy {
+		float: left;
+		//background: #687d87;
+		border-radius: 16px;
+		height: 32px;
+		margin-right: 8px;
+		position: relative;
+		width: 100px;
+
+		&.checked {
+			//background: #208fa1;
+			border:1px solid #00b0ff;
+		}
+		&.wei-checked {
+			border:1px solid #42bd41;
+		}
+		&.no-checked {
+			border:1px solid #90a4ae;
+		}
+	}
+	.drap-panel {
+		position: absolute;
+		z-index: 9;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		display: none;
+	}
+}
+
+.item {
+	float: left;
+	background: #fafafa;
+	border-radius: 16px;
+	height: 32px;
+	margin-left: 2px;
+	margin-right: 6px;
+	position: relative;
+	.item-img-box{
+		position: absolute;
+		width: 32px;
+		height: 32px;
+		left: -1px;
+		border-radius: 16px;
+		background-color: #78909c;
+		div{
+			width:24px;
+			height:24px;
+			margin: 3px 0 0 4px;
+		}
+		.zhibiao-img{
+			background-image: url(images/zhibiao.png);
+		}
+		.jisuanlie-img{
+			background-image: url(images/zhibiao_fx.png);
+			margin: 4px 0 0 4px;
+		}
+		.weidu-img{
+			background-image: url(images/weidu.png);
+		}
+	}
+	.text {
+		padding: 0 30px 0 40px;
+		line-height: 32px;
+		color: #393939;
+		position: relative;
+		z-index: 1;
+	}
+	.fx-text{
+		padding: 0 54px 0 40px!important;
+	}
+	.fi-text{
+		padding: 0 54px 0 40px!important;
+	}
+	.drag-icon{
+		position: absolute!important;
+		left: -1px;
+		top: 0;
+		width: 32px;
+		height: 32px;
+		border-radius: 16px;
+		background: #78909c;
+		color: #fff!important;
+		-webkit-text-stroke-width: 0!important;
+		-webkit-font-smoothing: antialiased!important;
+	}
+
+	.drag-icon:before{
+		position: absolute;
+	    top: 3px;
+	    left: 3px;
+	}
+	.drag-wei-test{
+		background-color:#78909c;
+		width:24px;
+		height:24px;
+		background-image: url(images/weidu.png);
+	}
+	.drag-wei-icon:before{
+		position: absolute;
+	    top: 2px;
+	    left: 4px;
+	    -webkit-text-stroke-width: 0!important;
+		-webkit-font-smoothing: antialiased!important;
+	}
+	.checked {
+		background: #0091ea!important;
+	}
+	.wei-checked{
+		background: #2baf2b!important;
+
+	}
+	.checked-err{
+		background: red!important;
+	}
+	.item-drag {
+		cursor: move;
+
+		.text {
+
+			padding: 0 15px 0 40px;
+		}
+	}
+
+	a {
+		position: absolute;
+		z-index: 10;
+		right: 7px;
+		top: 9px;
+		width: 16px;
+		height: 16px;
+		font-size: 20px;
+		line-height: 16px;
+		color: #aaa;
+		text-decoration: none;
+
+		&:hover {
+			color: #737373;
+		}
+	}
+	.fx-box{
+		position: absolute;
+		width:22px;
+		height: 20px;
+		top:4px;
+		right:27px;
+		.fx-black{
+			position: absolute;
+			top:0;
+			left:0;
+			display: block;
+			width:22px;
+			height: 22px;
+		}
+		.fx-icon{
+			position: absolute!important;
+			color:#aaaaaa!important;
+			top:0;
+			left:0;
+
+		}
+		&:hover {
+			.fx-icon{
+				color: #737373!important;
+			}
+
+		}
+	}
+	.weidu-icon-box{
+		position: absolute;
+			top: 4px;
+			right: 25px;
+			width:24px;
+			height: 24px;
+
+		.weidu-arrow-icon{
+			cursor: pointer;
+			display: inline-block;
+			top: 0;
+			right: 0;
+			width:24px;
+			height: 24px;
+
+		}
+		&>span{
+			color: #6a6a6a!important
+		}
+	}
+}
+.standard-panel {
+	height:60px;
+	.standard {
+		div {
+			border-top:0!important;
+			font-size:12px;
+		}
+	}
+}
+.xtext-panel {
+	.xtext {
+		float:left;
+		height:50px;
+	    line-height: 50px;
+	    color:#fff;
+	}
+}
+.fixText {
+	float:left;
+	margin:0 8px;
+}
+.charClass {
+	width: 100%;
+	height: auto;
+	padding: 0 48px 15px 48px;
+
+	.reportName {
+		height: 90px;
+		overflow: hidden;
+
+		.reportSetNameClassName {
+
+			/* &>div{
+				color: #fff!important;
+			} */
+		}
+	}
+	.siliderBox {
+		width: 100%;
+		height: auto;
+		//margin-top: 20px;
+
+		h2 {
+			color: rgba(255, 255, 255, 0.87);
+			font-weight: normal;
+			font-size: 14px;
+		}
+		.siliderBoxDown {
+			width: 100%;
+			height: 112px;
+			color: #fff;
+			position: relative;
+			margin-top: 10px;
+
+			.spanIconLeft {
+				position: absolute;
+				left: -24px;
+				top: 0;
+				margin-top: -2px;
+				cursor: pointer;
+				width: 24px;
+				height: 112px;
+				line-height: 112px;
+				text-align: center;
+			}
+			.spanIconRight {
+				position: absolute;
+				right: -24px;
+				top: 0;
+				margin-top: -2px;
+				cursor: pointer;
+				width: 24px;
+				height: 112px;
+				line-height: 112px;
+				text-align: center;
+			}
+			.sliderHideBox {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				position: relative;
+
+				.scrollBox {
+					width: auto;
+					height: 100%;
+					position: absolute;
+					left: 0;
+					top: 0;
+
+					ul {
+						list-style: none;
+					}
+					ul li {
+						width: 145px;
+						height: 110px;
+						float: left;
+						background: #455a64;
+						cursor: pointer;
+						border: #455a64 solid 1px;
+						position: relative;
+						margin-right: 8px;
+						list-style: none;
+
+						.imgBox {
+							width: 100%;
+							height: 100%;
+							background-image: url(images/list_icon.png);
+							background-position: 0 0;
+							background-repeat: no-repeat;
+						}
+						.Column {
+							background-position: 32px 18px;
+						}
+						.ScrollColumn2D {
+							background-position: 32px 18px;
+						}
+						.Pie {
+							background-position: -120px 18px;
+						}
+						.Pie2D {
+							background-position: -120px 18px;
+						}
+						.Area {
+							background-position: -276px 18px;
+						}
+						.ScrollArea2D {
+							background-position: -276px 18px;
+						}
+						.StackedArea2D {
+							background-position: -276px 18px;
+						}
+						.StackedArea {
+							background-position: -432px 18px;
+						}
+						.PercentColumn2D{
+							background-position: -586px -269px;
+						}
+						.StackedColumn2D {
+							background-position: -126px -269px;
+						}
+						.Pareto {
+							background-position: -740px 18px;
+						}
+						.roudoutu {
+							background-position: -898px 18px;
+						}
+						.Line {
+							background-position: -1050px 18px;
+						}
+						.ScrollLine2D {
+							background-position: -1050px 18px;
+						}
+						.BASE {
+							background-position: -431px -150px;
+						}
+						.KPI {
+							background-position: -744px -269px;
+						}
+						.TREE {
+							background-position: -123px -150px;
+						}
+						.CATEGORY {
+							background-position: 30px -150px;
+						}
+						.CROSS {
+							background-position: -281px -150px;
+						}
+						.EchartsMap {
+							background-position: -590px -148px;
+						}
+						.MultiAxisLine {
+							background-position: -746px 18px;
+						}
+						.WordCloud {
+							background-position: -746px -148px;
+						}
+						p {
+							position: absolute;
+							bottom: 5px;
+							left: 0;
+							color: #00e5ff;
+							font-size: 12px;
+							text-align: center;
+							width: 100%;
+							height: 22px;
+							line-height: 22px;
+							display: none;
+						}
+					}
+					ul li:hover {
+						border: #37474f solid 1px;
+						background: #37474f;
+
+						p {
+							display: block;
+						}
+					}
+					ul li.liActive {
+						border: #00e5ff solid 1px;
+						background: #37474f;
+
+						p {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.selectBox {
+	width: 100%;
+	height: auto;
+	padding: 8px 60px 0 60px;
+
+	.selectBox-hidden {
+		width: 100%;
+		height: 232px;
+		position: relative;
+
+
+		a.linkButton {
+			position: absolute;
+			margin-top: 0;
+			color: #fff;
+			text-decoration: none;
+			width: 32px;
+			height: 232px;
+			line-height: 232px;
+			text-align: center;
+		}
+		.prev {
+			left: -32px;
+			top: 0;
+		}
+		.next {
+			right: -32px;
+			top: 0;
+		}
+		.selectBox-hiddenBox {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			overflow: hidden;
+
+			.selectScrollBox {
+				position: absolute;
+				left: 0;
+				top: 0;
+				width: auto;
+				height: 100%;
+				z-index: 10;
+
+				.selectBoxListBox {
+					width: 240px;
+					height: 100%;
+					float: left;
+					margin-right: 8px;
+					cursor: pointer;
+					z-index: 10;
+
+					.listBox {
+						width: 100%;
+						height: 112px;
+						position: relative;
+						background-color: #455a64;
+						z-index: 11;
+
+						.floatDivBox {
+							//点击单个弹出的浮动层
+							position: relative;
+							width: 100%;
+							height: 100%;
+
+							.listBox-top {
+								width: 100%;
+								height: 72px;
+								padding: 10px 16px;
+								color: rgba(255, 255, 255, 0.54);
+								overflow: hidden;
+								text-overflow: ellipsis;
+								h3 {
+									font-size: 14px;
+									margin-bottom: 2px;
+									font-weight: normal;
+								}
+								.filterPopList {
+									width: 100%;
+									height: 100%;
+									overflow: hidden;
+
+									.filterPopListScroll {
+										p:nth-child(2){
+											text-overflow: ellipsis;
+										    white-space: nowrap;
+										    overflow: hidden;
+										}
+									}
+								}
+							}
+							.listBox-down {
+								width: 100%;
+								height: 40px;
+								line-height: 40px;
+								background: rgba(84, 110, 122, 0.26);
+								padding: 0 16px;
+								font-size: 12px;
+								color: rgba(255, 255, 255, 0.54);
+
+								.shaixuan {
+									float: right;
+									display: inline-block;
+									color: rgba(255, 255, 255, 0.54);
+									font-size: 22px;
+									font-weight: normal;
+									text-decoration: none;
+								}
+							}
+						}
+						&:hover {
+							background-color: #3c505a;
+
+							.listBox-top {
+								color: rgba(255, 255, 255, 0.87);
+							}
+							.listBox-down {
+								color: rgba(255, 255, 255, 0.87);
+							}
+						}
+						.floatDivBoxOpen {
+							background-color: rgba(55, 71, 79, 0.87);
+
+							.listBox-top {
+								color: rgba(255, 255, 255, 0.87);
+							}
+							.listBox-down {
+								color: rgba(255, 255, 255, 0.87);
+								background: rgba(84, 110, 122, 0.54);
+
+								.shaixuan {
+									color: #00e5ff;
+								}
+							}
+							&:hover {
+								background-color: rgba(55, 71, 79, 1);
+
+								.floatDivBox {
+									.listBox-top {
+										color: rgba(255, 255, 255, 0.87);
+									}
+									.listBox-down {
+										color: rgba(255, 255, 255, 0.87);
+										background: rgba(84, 110, 122, 0.54);
+
+										.shaixuan {
+											color: #00e5ff;
+											text-decoration: none;
+										}
+									}
+								}
+							}
+						}
+					}
+					.listBoxDown {
+						margin-top: 8px;
+					}
+				}
+			}
+			.tckSelectBox {
+				position: absolute;
+				width: 240px;
+				height: 112px;
+				background: #455a64;
+				transition: width .3s, height .3s, background .3s;
+				-moz-transition: width .3s, height .3s, background .3s;
+				-webkit-transition: width .3s, height .3s, background .3s;
+				-ms-transition: width .3s, height .3s, background .3s;
+				display: none;
+
+				.tckSelectBoxTop {
+					width: 100%;
+					height: 40px;
+					line-height: 40px;
+					background-color: #455a64;
+					display: none;
+					position: relative;
+					.select {
+						width: auto;
+						float: left;
+
+						.DropDownMenuClass {
+							height: 40px !important;
+							line-height: 40px;
+							font-size: 14px !important;
+
+							&>div {
+								height: 40px !important;
+								line-height: 40px !important;
+								font-size: 14px !important;
+							}
+							&>div>div {
+								line-height: 40px !important;
+								font-size: 14px !important;
+								border: none !important;
+								color: #fff !important;
+							}
+							&>div>svg {
+								top: 8px !important;
+								fill: rgba(255, 255, 255, 1) !important;
+							}
+						}
+					}
+					.filterPopSearchBox {
+						width: 40%;
+						height: 40px;
+						padding: 8px;
+						left: 16px;
+
+						.searchInputBox {
+							width: 100%;
+							height: 25px;
+							background-color: #fafafa;
+							border-radius: 2px;
+							position: relative;
+							padding-left: 40px;
+
+							input {
+								width: 100%;
+								padding-top: 5px;
+								display: inherit !important;
+								background-color: #fafafa;
+							}
+							span {
+								width: 24px;
+								height: 24px;
+								display: block;
+								position: absolute;
+								right: 2px;
+								top: 6px;
+								color: rgba(0, 0, 0, .54);
+								cursor: pointer;
+								font-size: 20px;
+							}
+							i {
+								width: 24px;
+								height: 24px;
+								line-height: 26px;
+								display: block;
+								position: absolute;
+								left: 6px;
+								top: 0;
+								color: rgba(0, 0, 0, .54);
+								cursor: pointer;
+								font-size: 24px;
+							}
+						}
+					}
+					.searchInputBox input::-webkit-input-placeholder {
+						color: rgba(0, 0, 0, .54);
+
+					}
+					.retractsBox {
+						float: right;
+						padding-right: 24px;
+						height: 40px;
+
+						span {
+							width: 24px;
+							height: 24px;
+							font-size: 24px;
+							color: #fff;
+							cursor: pointer;
+						}
+					}
+				}
+				.tckSelectBoxDown {
+					width: 100%;
+					height: 192px;
+					padding: 16px 16px 20px 16px;
+					display: none;
+
+					.nullDataClassName {
+						width: 100%;
+						height: 100%;
+						line-height: 160px;
+						text-align: center;
+						color: #fff;
+						font-size: 14px;
+					}
+					.tckSelectBoxDownScroll {
+						width: 100%;
+						height: 100%;
+
+						.tckSelectBoxDownScrollBox {
+							width: 100%;
+							height: auto;
+							position: relative;
+
+							&>div {
+								width: auto !important;
+								float: left;
+								margin: 0 8px;
+								&.loadingPage{
+									width:100%!important;
+								}
+							}
+							&>div>div {
+								width: auto !important;
+								float: left;
+							}
+							&>div>div>label {
+								width: auto !important;
+								float: left;
+								font-size: 14px !important;
+							}
+							&>div>div>div {
+								margin-right: 8px !important
+							}
+						}
+					}
+				}
+				z-index:30;
+			}
+			.tckSelectShowBox {
+				z-index: 100;
+				width: 736px;
+				height: 232px;
+				background: rgba(55, 71, 79, 1) !important;
+				cursor: default;
+			}
+			.treeTckSelectShowBox {
+				z-index: 100;
+				width: 488px;
+				height: 232px;
+				background: rgba(55, 71, 79, 1) !important;
+				cursor: default;
+			}
+			.dateTckClassName {
+				position: absolute;
+				z-index: 100;
+				width: 240px;
+				height: 112px;
+				background: #455a64;
+				transition: width .3s, height .3s, background .3s;
+				-moz-transition: width .3s, height .3s, background .3s;
+				-webkit-transition: width .3s, height .3s, background .3s;
+				-ms-transition: width .3s, height .3s, background .3s;
+				display: none;
+				.tckSelectBoxTop {
+					width: 100%;
+					height: 40px;
+					line-height: 40px;
+					background-color: #455a64;
+					display: none;
+
+					.select {
+						width: auto;
+						float: left;
+
+						.DropDownMenuClass {
+							height: 40px !important;
+							line-height: 40px;
+							font-size: 14px !important;
+
+							&>div {
+								height: 40px !important;
+								line-height: 40px !important;
+								font-size: 14px !important;
+							}
+							&>div>div {
+								line-height: 40px !important;
+								font-size: 14px !important;
+								border: none !important;
+								color: #fff !important;
+							}
+							&>div>svg {
+								top: 8px !important;
+								fill: rgba(255, 255, 255, 1) !important;
+							}
+						}
+					}
+					.filterPopSearchBox {
+						width: 40%;
+						height: 40px;
+						padding: 8px;
+						left: 16px;
+
+						.searchInputBox {
+							width: 100%;
+							height: 100%;
+							background-color: #fafafa;
+							border-radius: 2px;
+							position: relative;
+							padding-left: 40px;
+
+							input {
+								width: 100%;
+								height: 100%;
+								line-height: 30px;
+								display: inherit !important;
+								background-color: #fafafa;
+							}
+							span {
+								width: 24px;
+								height: 24px;
+								display: block;
+								position: absolute;
+								right: 2px;
+								top: 6px;
+								color: rgba(0, 0, 0, .54);
+								cursor: pointer;
+								font-size: 20px;
+							}
+							i {
+								width: 24px;
+								height: 24px;
+								line-height: 26px;
+								display: block;
+								position: absolute;
+								left: 6px;
+								top: 0;
+								color: rgba(0, 0, 0, .54);
+								cursor: pointer;
+								font-size: 24px;
+							}
+						}
+					}
+					.searchInputBox input::-webkit-input-placeholder {
+						color: rgba(0, 0, 0, .54);
+					}
+					.retractsBox {
+						float: right;
+						padding-right: 24px;
+						height: 40px;
+
+						span {
+							width: 24px;
+							height: 24px;
+							font-size: 24px;
+							color: #fff;
+							cursor: pointer;
+						}
+					}
+				}
+				.tckSelectBoxDown {
+					width: 100%;
+					height: 192px;
+					padding: 16px;
+					display: none;
+					position: relative;
+				}
+				z-index: 30;
+			}
+			.dateTckClassNameShowBox {
+				z-index: 100;
+				width: 240px;
+				height: 232px;
+				display: block;
+				background: #36474f !important;
+				.tckSelectBoxTop {
+					background-color: none;
+				}
+			}
+		}
+	}
+}
+.ReportDateRangeSelector {
+	font-size: 12px;
+	& hr{
+		width: 92px!important;
+
+		border-color: rgba(255,255,255,.54)!important;
+	}
+	table {
+		width: 100%;
+
+		td {
+			color: #fff;
+			div {
+				div {
+					height: 40px!important;
+					div:nth-child(1) {
+						width: 96px!important;
+						height: 22px!important;
+						color:rgba(255,255,255,.54)!important;
+						font-size: 12px!important;
+						text-align: left;
+						bottom: 10px!important;
+					}
+					input{
+						width: 92px!important;
+						height: 32px!important;
+						color: #fff !important;
+						font-size: 12px!important;
+					}
+				}
+			}
+		}
+	}
+	.date-range {
+		height: 36px;
+		cursor: pointer;
+
+		span {
+			display: inline-block;
+			margin-top: 10px;
+			float: left;
+		}
+		.iconfont {
+			float: left;
+			line-height: 25px;
+			font-size: 24px;
+			margin-top: 6px;
+		}
+	}
+	.dateButtons {
+		position: absolute;
+		right: 8px;
+		bottom: 8px;
+		float: right;
+		&>button:nth-child(1){
+			margin-right: 8px !important;
+		}
+		&>button{
+			min-width: 72px!important;
+		}
+	}
+}
+.matadata-select {
+	font-size: 12px !important;
+}
+.param-select {
+	font-size: 12px !important;
+	position: relative;
+	left: -10px;
+}
+.matadata-select-item {
+	font-size: 12px !important;
+}
+.item {
+	float: left;
+	background: #fafafa;
+	border-radius: 16px;
+	height: 32px;
+	margin-left: 2px;
+	margin-right: 6px;
+	position: relative;
+
+	.text {
+		padding: 0 30px 0 40px;
+		line-height: 32px;
+		color: #393939;
+		position: relative;
+		z-index: 1;
+	}
+	i {
+		position: absolute;
+		left: -1px;
+		top: 0;
+		width: 32px;
+		border-radius: 16px;
+		background: #78909c;
+		z-index: 2;
+		text-align: center;
+		line-height: 32px;
+		color: #f0f2f3;
+
+		&.checked {
+			background: #00bcd4;
+		}
+	}
+	&.item-drag {
+		cursor: move;
+
+		.text {
+			padding: 0 15px 0 40px;
+		}
+	}
+	a {
+		position: absolute;
+		z-index: 10;
+		right: 7px;
+		top: 9px;
+		width: 16px;
+		height: 16px;
+		font-size: 20px;
+		line-height: 16px;
+		color: #aaa;
+
+		&:hover {
+			color: #737373;
+		}
+	}
+}
+.selectMenuPanel {
+	overflow: hidden !important;
+	height: 500px;
+}
+/**start 报表导出功能的弹出层样式设置*/
+.MenuItemClassNamePanel{
+	 //width:112px!important;
+	 background: #fff !important;
+
+}
+.MenuItemClassNameBox{
+	max-height: 160px!important;
+	overflow: hidden !important;
+	background: #fff!important;
+	padding: 16px 0 !important;
+	width: 128px !important;
+	&>div{
+		padding:0 0 !important;
+		background: #fff!important;
+		&>div{
+			padding:0 0 !important;
+			background: #fff!important;
+			box-shadow: none!important;
+			&>div{
+				padding:0 0 !important;
+				background: #fff!important;
+			}
+		}
+	}
+}
+.MenuItemClassName{
+	width: 128px !important;
+	padding: 16px 0 !important;
+	max-height: 160px!important;
+	 background: #fff !important;
+	line-height: 32px!important;
+	&>div>div{
+		padding: 0!important;
+		padding-left: 24px!important;
+		svg{margin:4px 13px 0 0 !important; right: 0 !important;}
+		&>div{
+			color: rgba(0,0,0,.87)!important;
+			font-size: 14px!important;
+		}
+	}
+}
+.MenuItemClassNames{
+	 width: 128px !important;
+	 max-height: 160px!important;
+	 background: #fff !important;
+	 line-height: 32px!important;
+	 &>div>div{
+		 padding: 0!important;
+		 padding-left: 24px!important;
+		 svg{margin:4px 13px 0 0 !important; right: 0 !important;}
+		 &>div{
+			 color: rgba(0,0,0,.87)!important;
+			 font-size: 14px!important;
+		 }
+	 }
+	 &.disabled {
+	 	 &>div>div>div{
+	 	 	color:#999!important;
+	 	 }
+	 }
+ }
+
+.MenuItemClassNamesForMultiAxisLine{
+	width: 150px !important;
+	max-height: 160px!important;
+	background: #fff !important;
+	&>div>div{
+		padding: 0!important;
+		padding-left: 24px!important;
+		svg{margin:4px 13px 0 0 !important; right: 0 !important;}
+		&>div{
+			color: rgba(0,0,0,.87)!important;
+			font-size: 14px!important;
+		}
+	}
+}
+
+.MenuItemClassNameP{
+	width: 128px!important;
+	background: #fff !important;
+}
+.twoMenuItem{
+	width: 128px !important;
+	color: rgba(0, 0, 0, 0.3) !important;
+	padding-left: 0px  !important;
+	max-height: 160px!important;
+	 background: #fff !important;
+	line-height: 32px!important;
+	font-size: 14px !important;
+	&>div{
+		padding-left: 24px !important;
+		&>div{ 
+			padding: 0!important;
+			&>div{
+				color: rgba(0,0,0,.87)!important;
+				font-size: 14px!important;
+			}
+		}
+	}
+}
+.twoMenuItemStyle{
+	padding:16px 0 !important;
+	background: #fff !important;
+}
+
+.twoMenuItemPanel{
+	//width: 128px!important;
+	background: #fff!important;
+
+}
+.twoMenuItemBox{
+	max-height: 160px!important;
+	overflow: hidden !important;
+	background: #fff!important;
+	padding: 8px 0 !important;
+	&>div{
+		width: 128px!important;
+		padding:0 0 !important;
+		background: #fff!important;
+		&>div{
+			padding:0 0 !important;
+			background: #fff!important;
+			box-shadow: none!important;
+			&>div{
+				width: 128px!important;
+				padding:0 0 !important;
+				background: #fff!important;
+			}
+		}
+	}
+}
+/**end 报表导出功能的弹出层样式设置*/
+
+/**  立方树形选择 begin */
+
+.metatada-selector-box{
+	height:100%;
+	overflow:hidden;
+	.head{ height: 58px;  background-color: #37474f !important;}
+	.matadata{padding:0;}
+	.content{
+		height: calc(100% - 80px);
+		overflow:hidden;
+	}
+
+}
+.metadata-selector-view-body{
+	position: relative;
+	height: 100%;
+}
+
+.metadata-selector-view-body .body-view{
+	position: absolute;
+	background-color: #465862;
+	width: 100%;
+	height: 100%;
+}
+
+.metadata-selector-view-body-push-enter {
+	transform:translateX(300px);
+	z-index: 2;
+}
+
+.metadata-selector-view-body-push-enter-active {
+  transition: transform 500ms ease-in;
+  transform:translateX(0);
+}
+
+.metadata-selector-view-body-push-leave {
+  z-index: 1;
+}
+
+.metadata-selector-view-body-push-leave-active {
+
+}
+
+.metadata-selector-view-body-pop-enter {
+	z-index: 1;
+}
+
+.metadata-selector-view-body-pop-enter-active {
+}
+
+.metadata-selector-view-body-pop-leave {
+  transform:translateX(0);
+  z-index: 2;
+}
+
+.metadata-selector-view-body-pop-leave-active {
+  transform:translateX(300px);
+  transition: transform 500ms ease-in;
+}
+
+.metadata-empty{
+	width:100%;
+	height:100%;
+	position:relative;
+	.metadata-empty-bg{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		width:16px;
+		height:16px;
+		color: #78909c;
+		margin-left: -55px;
+		margin-top: -80px;
+		//background:url("images/error_icon.png") 0 0 no-repeat;
+
+	}
+	.metadata-empty-text{
+		width:100%;
+	    color: #78909c;
+		height: 30px;
+		left: 50%;
+		top: 50%;
+		margin-top: -85px;
+		position:absolute;
+		margin-left:-120px;
+		font-size: 16px;
+		text-align: center;
+		color: #78909c;
+	}
+}
+.metadata-error{
+	width:100%;
+	height:100%;
+	position:relative;
+	.metadata-error-bg{
+		top: 50%;
+		left: 50%;
+		position: absolute;
+		margin-left: -42px;
+		margin-top: -110px;
+		width:84px;
+		height: 84px;
+		background:url("images/error_icon.png") center -144px no-repeat;
+		.metadata-error-text{
+			width:100%;
+			height: 30px;
+			position:absolute;
+			top:100px;
+			text-align: center;
+			color: #fff;
+		}
+	}
+
+}
+
+/**  立方树形选择 end */
+.show-huizong-panel {
+	width:100%;
+	height:304px;
+	overflow:hidden;
+	.content {
+		label {
+			font-size:14px!important;
+			color:rgba(255, 255, 255, 0.87) !important;
+			padding-top: 0 !important;
+			&>div:nth-child(1){
+				top:-3px !important;
+				right: -6px !important;
+			}
+		}
+		.divIderLine{
+			background: #6a7b83 !important;
+
+		}
+		.list-panel{
+			padding-bottom: 20px !important;
+			padding-top: 0px !important;
+			&>div{
+				height: 32px;
+				padding-left: 24px;
+			    padding-top: 16px !important;
+				color: rgba(255, 255, 255, 0.87);
+				&>div div:hover{
+					 background: none !important;
+				}
+				.hrLine{
+					background: #6a7b83 !important;
+					position: relative;
+					bottom: 7px;
+					width: 358px;
+					margin-left: 16px !important;
+
+				}
+			}
+
+			&>div:last-child .hrLine{
+				background:none !important;
+			}
+		}
+
+		.title {
+			padding-top:16px;
+
+			// height:44px;
+			// background:#37474f;
+			span:nth-child(1){
+				font-size: 16px;
+				color: rgba(255, 255, 255, 0.54);
+
+			}
+			span{
+				color: rgba(255, 255, 255, 0.54);
+				// color:#fff;
+				font-size:14px;
+				display:block;
+				margin-bottom: 5px;
+				font-size: normal;
+				padding-left:24px;
+			}
+		}
+	}
+}
+
+.set-customName-panel {
+	padding:5px 20px 50px 20px;
+	position: relative;
+	.set-customName-buttons {
+		position:absolute;
+		right:20px;
+		bottom:10px;
+		button:nth-child(1){
+			margin-right: 8px !important;
+		}
+
+
+			button:nth-child(2){
+			 	&>div:hover{
+								color: rgba(254, 255, 255, 0.87) !important
+					}
+		}
+	}
+	.title {
+		font-size:14px;
+		padding-top:8px;
+		font-weight: normal;
+		color: rgba(0,0,0,0.87)
+	}
+}
+.customname-button {
+	width:24px!important;
+	height:24px!important;
+	opacity:0!important;
+}
+.signIcon{
+  display: inline-block;
+  height: 20px !important;
+  text-align: center;
+	padding: 0 4px 0 4px !important;
+  line-height: 17px;
+  background:#bdbdbd !important;
+  position: relative;
+  color: #fff !important;
+  font-size: 12px;
+  border-radius: 6px;
+}
+.signIconHide{
+	display: none;
+}
+.theadLeftIcon{
+	position:absolute;
+	width: 21px !important;
+	height: 21px !important;
+	left: -24px;
+	top: 0;
+	display: none;
+	padding-left: 0!important;
+	.topIcon{
+		font-size: 18px !important;
+		left: 0px !important;
+		top: 1px !important;
+		opacity:1!important;
+		width: 21px !important;
+		height: 21px !important;
+		padding:0px !important;
+		color: rgba(0, 0, 0, .87)!important;
+		cursor: pointer;
+	}
+}
+.tooltipPanel {
+	position:absolute;
+	background:#fff;
+	top:50px;
+	padding:10px;
+	display:none;
+	min-width:210px;
+	box-shadow:2px 2px 15px 4px #ccc;
+	line-height:24px;
+	label {
+		display:inline-block;
+		width:85px;
+	}
+	b {
+		color:#333;
+	}
+	span {
+		padding:0!important;
+	}
+}
+.statTooltipPanel {
+	position: relative;
+	&:hover {
+		z-index:99999;
+		.tooltipPanel {
+			top:40px;
+			display:block;
+			label {
+				color:#666!important;
+			}
+		}
+	}
+}
+.customname-button:hover {
+	opacity:1!important;
+}
+.tree_column_header_td:hover {
+	.customname-button:hover {
+		opacity:1!important;
+	}
+	.theadLeftIcon{
+		display: block;
+	}
+
+}
+.showTheadLeftIcon{
+	display: block;
+}
+.customname-icon {
+	position: absolute!important;
+	font-size:14px!important;
+	color:#333!important;
+	top:0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+}
+.customname-icon:before{
+	position: absolute;
+    top: -20px;
+    left: 0;
+    width: 24px;
+    height: 24px;
+}
+/*start设置折线图 折线超过20条提示的样式*/
+.showCharBoxClass{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	// padding: 100px 0;
+	&>dl{
+		width: 500px;
+		height: 112px;
+		position: absolute;
+		left: 0;
+		top: -86px;
+		bottom: 0;
+		right: 0;
+		margin:auto;
+	}
+	&>dl>dt{
+		font-size: 14px;
+		text-align: center;
+		color: rgba(0,0,0,.87);
+		&>span{
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			margin-right: 8px;
+			font-size: 24px;
+			position: relative;
+			&:before{
+				position: absolute;
+				top: 6px;
+				left: 0;
+			}
+		}
+	}
+	&>dl>dd{
+		float: left;
+		width: 100%;
+		height: 36px;
+		text-align: center;
+		margin-top: 48px;
+	}
+	.showCharButtonClass{
+		cursor: pointer;
+		width: 88px;
+		height: 36px;
+		line-height: 36px;
+		margin: 0 auto;
+		font-size: 14px;
+		border-radius: 2px;
+		color: rgba(84,110,122,1);
+		transition: background .3s;
+		-moz-transition: background .3s;
+		-webkit-transition: background .3s;
+		-ms-transition: background .3s;
+		&:hover{
+			background: rgba(84,110,122,.15);
+		}
+		&:active{
+			background: rgba(84,110,122,.25);
+		}
+	}
+}
+/*end 设置折线图 折线超过20条提示的样式*/
+.fieldLoadingPage {
+	height: 20px;
+    overflow: hidden;
+    width: 100% !important;
+    position: absolute;
+    margin: 0 !important;
+    bottom: 0;
+    z-index: 999;
+    text-align: center;
+    color: #fff;
+}
+.filedsLoadingBox {
+	position: absolute;
+	width:100%;
+	height:100%;
+	background:#000;
+	z-index:10000;
+	left:0;
+	top:0;
+}
+/*****start 树形维度筛选弹出的样式代码*/
+.currentPath{
+	float: left;
+	margin-left: 56px;
+	font-size: 14px;
+	color: #fff;
+	& span{
+		display: inline-block;
+		// margin: 0 0 0 8px;
+	}
+	&>span:first-child{
+		margin-right: 4px;
+	}
+
+}
+.treeScrollBox{
+	width: 100%;
+	height: auto;
+}
+.treeFilterSearchBox{
+	width: 18px;
+	height: 40px;
+	position: absolute;
+	right: 56px;
+	overflow: hidden;
+	transition: width .3s;
+	-moz-transition: width .3s;
+	-webkit-transition: width .3s;
+	-ms-transition: width .3s;
+	&>i{
+		width: 24px;
+		height: 24px;
+		color: #fff;
+		font-size: 18px;
+		text-align: center;
+		cursor: pointer;
+	}
+	.showSearchInput{
+		width: 0;
+		height: 40px;
+		float: right;
+		position: relative;
+		transition: width .3s;
+		overflow: hidden;
+		-moz-transition: width .3s;
+		-webkit-transition: width .3s;
+		-ms-transition: width .3s;
+		input{
+			width: 100%;
+			padding: 0;
+			margin: 0;
+			height: 26px;
+			line-height: 26px;
+			float: left;
+			margin-top: 7px;
+			background: none;
+			border-bottom: #fff solid 1px;
+			color: rgba(255, 255, 255, .54);
+			&::-webkit-input-placeholder {
+				color: rgba(255, 255, 255, .54);
+			}
+		}
+		span{
+			position: absolute;
+			right: -6px;
+			top: 8px;
+			width: 24px;
+			height: 24px;
+			line-height: 24px;
+			color: #fff;
+			font-size: 18px;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+}
+.treeFilterSearchBox-show{
+	width: 196px;
+	.showSearchInput{
+		width: 170px;
+	}
+}
+.goBackBox{
+	position: absolute;
+	left: 8px;
+	top: 0;
+	height: 40px;
+	&>button{
+		padding:0!important;
+		border:0!important;
+		width: 40px!important;
+		height: 40px!important;
+		&>div{
+			width: 40px!important;
+			height: 40px!important;
+		}
+	}
+}
+.selectBox .selectBox-hidden .selectBox-hiddenBox .tckSelectBox .treeTckSelectBoxDown{
+	padding:0;
+}
+.treeListBox{
+	width: 100%;
+	height: 100%;
+	.treeListScrollBox{
+		width: 100%;
+		height: auto;
+		&>div{
+			padding: 0!important;
+			margin-top: 8px;
+			margin-bottom: 8px;
+			width: 100%;
+			background: none!important;
+			.seletedClass{
+				width: 24px;
+				height: 24px;
+				color: #00e5ff!important;
+				margin: 0!important;
+				left: 18px!important;
+				&.seletedClass2 {
+					color:#ccc!important;
+				}
+			}
+			.grayColor{
+				color: rgba(255, 255, 255, .26)!important;
+			}
+			.openSrcClass{
+				width: 24px;
+				height: 24px;
+				// color: #00e5ff!important;
+				color: rgba(255, 255, 255, .48)!important;
+				margin: 0!important;
+				right: 0!important;
+				&:hover{
+					color: #00e5ff!important;
+				}
+			}
+			&>div{
+				height: 32px;
+				line-height: 32px;
+				width: 100%;
+				padding-right: 24px;
+				&>span{
+					height: 32px!important;
+					line-height: 32px!important;
+					font-size: 14px!important;
+					&:hover{
+						background: none!important;
+					}
+					&>div>div>div{
+						width: 100%;
+						overflow: hidden;
+						text-overflow: ellipsis;
+						white-space: nowrap;
+					}
+					&>div>div>div:hover{
+
+						color: #00e5ff;
+					}
+				}
+			}
+			&>div>span>div>div{
+				padding-top: 0!important;
+				padding-left: 57px!important;
+				padding-bottom: 0!important;
+				padding-right: 0!important;
+			}
+			.true-list-li {
+				position: relative;
+				width:100%;
+				height:32px;
+				span {
+					width:24px;
+					height:24px;
+					font-size: 24px!important;
+					position: absolute;
+					&.seletedClass {
+						color:#00e5ff;
+						left:18px;
+						z-index:0;
+					}
+					&.openSrcClass {
+						color:#00e5ff;
+						right:24px!important;
+						top:0;
+						cursor: pointer;
+						z-index:3;
+					}
+					&.hide {
+						display:none!important;
+					}
+				}
+				.title {
+					position: relative;
+					cursor: pointer;
+					width:100%;
+					color:rgb(221, 225, 227);
+					font-size:14px;
+					text-indent:57px;
+					z-index:2;
+					overflow: hidden;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+					&:hover {
+						color:#00e5ff;
+					}
+				}
+			}
+		}
+	}
+}
+/*****end 树形维度筛选弹出的样式代码*/
+
+
+/*start 指标筛选样式*/
+.zhiBiaoFilter{
+}
+.zhiBiaoFilterList{
+	width: 90px!important;
+}
+.hideFilter{
+	display: none !important;
+}
+.setBg{
+	background-color: #fff!important;
+}
+.zhiBiaoMinMaxDialog{
+			width:400px !important;
+			height:400px !important;
+	.textFieldCont{
+		&>div{
+			width:150px;
+			margin-left:10px;
+			float: left;
+		}
+
+	}
+	.zhibiaobottomDialog{
+		&>button:nth-child(1){
+			margin-right: 8px !important;
+		}
+	}
+}
+
+.textSelsct {
+	&>div>div{
+		width: 330px !important;
+		white-space: nowrap !important;
+	  overflow: hidden !important;
+	  text-overflow: ellipsis !important;
+	}
+
+}
+.zhibiaoRankingDialog{
+  	width: 352px !important;
+    height: 220px !important;
+    background-color: #455a64 !important;
+    padding: 0px !important;
+    box-shadow: 0px 14px 45px rgba(0, 0, 0, 0.25), 0px 10px 18px rgba(0, 0, 0, 0.22);
+		&>div{
+			.zhibiaoBodyDialog{
+				height: 134px !important;
+				&>div{
+						.chooseType{
+						  	float:left;
+						  width: 152px;
+						}
+						.textCont{
+							float: right;
+							margin-top: 24px;
+							width: 151px;
+							overflow: hidden;
+
+							div{
+								width: 151px;
+							}
+						}
+				}
+			}
+			.zhibiao{ height: 212px !important}
+		}
+		.zhibiaobottomDialog{
+			&>button:nth-child(1){
+				margin-right: 8px !important;
+			}
+		}
+}
+// 面包屑
+.breadcrumbTopBox{
+	font-size: 16px	;
+	width: 100%;
+	margin-top: 8px;
+	color: rgba(0, 0, 0, 0.54);
+	.breadShow{
+		text-overflow: ellipsis;
+	    white-space: nowrap;
+	    overflow: hidden;
+	    padding-right: 20px;
+		.breadclas{
+			span{ cursor: auto;}
+		}
+		span{
+		 cursor: pointer;
+		}
+	}
+}
+.HeaderTooltip{
+	padding:0px 24px 0px 24px;
+}
+.tooltipBoxShow{
+	width: 520px;
+	height: auto;
+	padding:10px;
+	position: fixed;
+	z-index: 9999999;
+	border-radius: 3px;
+	background: #fff;
+    display: block;
+    box-shadow: 0px 0px 6px 0px;
+}
+.tooltipBox{width: 520px;}
+
+.tooltipBoxHide{
+	width: 520px;
+	display: none;
+}
+/*end 指标筛选样式*/
+
+/* 对比 */
+
+.contrast{
+	width:100%;
+	height:auto;
+	display: block;
+	.compare-cont{
+		height: 48px;
+		background-color: #546e7a;
+		.weidu-list{
+			width:120px;
+			float: left;
+			.compare-weiduList{
+
+				&>div{
+					width: 120px;
+					text-align: center;
+					height: 48px;
+					line-height: 40px;
+					cursor: pointer;
+					color:#eef0f1;
+					.iconBut{
+						top:5px;
+					}
+				}
+
+
+			}
+		}
+		.compare-scene{
+			float: left;
+			.scenes{
+			width:100%;
+			overflow: hidden;
+			background-color: #546e7a;
+			.scenes-item{
+				max-width: 160px;
+				height:48px;
+				float: left;
+				.scenes-name{
+					width:100%;
+					cursor: pointer;
+					height: 48px;
+					line-height: 48px;
+					text-align: center;
+					color: #b2bbc0;
+					overflow: hidden;
+					text-overflow:ellipsis;
+					white-space: nowrap;
+					padding: 0 24px;
+				}
+				.scenes-name-selected{
+					color: #eef0f1
+				}
+				.scenes-line{
+					width: 100%;
+					height: 2px;
+					background: #00e5ff;
+					margin-top:-2px;
+				}
+			}
+			.scenes-add{
+				padding: 0 24px;
+				.icon-ictianjia24px{
+					top:12px;
+					cursor: pointer;
+				}
+			}
+
+			}
+		}
+	}
+	/*场景信息栏*/
+	.compare-details{
+		width: 100%;
+		height: 38px;
+		.compare-info{
+			width: 100%;
+			height: 38px;
+			padding:0 24px;
+			color: #fff;
+			background-color: #607d8b;
+			line-height: 38px;
+			&>div{
+				float: left;
+			}
+			.compare-info-list{
+				width: calc(100% - 124px);
+				cursor: pointer;
+				.compare-info-cont{
+					width: 100% ;
+					float: left;
+						.details-text{
+							overflow: hidden;
+							white-space:nowrap;
+							 text-overflow: ellipsis;
+							width: auto;
+							float: left;
+						}
+				}
+				.compare-info-edit{
+				  	float: left;
+						color: #08dff8;
+						margin-left: 20px;
+						cursor: pointer;
+				}
+				.ellipsis{
+					float: left;
+				}
+
+				.label{
+					color:#08dff8;
+					margin-left: 20px;
+					position: absolute;
+				}
+			}
+
+			.compare-info-toggle{
+				width: 124px;
+				float: right;
+				&>div{
+					float: left;
+				}
+				.compare-info-text{
+					height:38px;
+				}
+				.compare-info-btn{
+					margin:8px 0 0 6px;
+				}
+			}
+			.compare-info-name{
+				margin:0 2px;
+				&>span{
+
+				}
+			}
+		}
+	}
+
+}
+.compare-popover{
+		.listItem{
+				& > div{
+					color:rgba(255, 255, 255, 0.87);
+					font-size:14px;
+					font-weight: normal;
+					width:120px;
+				}
+		}
+				.disabledlistItem{
+					& > div{
+						color: rgba(255,255,255,0.3) !important;
+
+					}
+				}
+				.listItem:hover{
+				 color:#08dff8 ;
+		}
+}
+.public-tooltip{
+	position: fixed;
+	z-index: 99999;
+	padding:10px;
+	border-radius: 3px;
+	background: #fff;
+  box-shadow: 0px 0px 6px 0px;
+	color:rgba(0, 0, 0, 0.54);
+
+	&>span{
+			&>span{
+				height: 25px;
+				line-height: 25px;
+				font-size: 16px;
+
+			}
+
+	}
+}
+.comparedialogAddClassName{
+
+		 width:424px !important;
+    height: 250px !important;
+    background-color: #455a64 !important;
+    padding: 0px !important;
+    box-shadow: 0px 14px 45px rgba(0, 0, 0, 0.25), 0px 10px 18px rgba(0, 0, 0, 0.22);
+		&>div{
+    background: none !important;
+    box-shadow: none !important;
+    height: 100%;
+    padding-top: 24px;
+    padding-right: 24px;
+    padding-left: 24px;
+		}
+}
+.comparedialogAddClassNameTitle{
+	 font-size: 16px !important;
+	 color: rgba(255,255,255,255) !important;
+	 padding: 0px !important;
+	 line-height: normal !important;
+}
+.comparedialogAddClassNameBody{
+			font-size: 16px !important;
+		 	padding: 0px !important;
+		 height: 73px !important;
+		 overflow: visible !important;
+}
+.comparedialogAddClassNameBody div:nth-child(1){
+	width: 100% !important;
+}
+// .comparedialogAddClassNameBody input[type='text']{
+// 	color:rgba(255,255,255,255) !important;
+// }
+.comparedialogAddClassNameBottom{
+	 padding: 0px !important;
+	 margin-top: 85px !important;
+	 height: 52px;
+	 right: 24px;
+   width: auto !important;
+	 position: absolute;
+	 &>button:nth-child(1){
+		 margin-right: 8px !important;
+	 }
+
+}
+.filterButton{
+	bottom: 70px;
+  position: absolute;
+	&>div{
+		.button{
+			background-color:#455a64 !important;
+		}
+	}
+
+}
+.delButton{
+	&>span{
+		font-size: 14px;
+		color: #ea427c !important;
+		cursor: pointer;
+		position: absolute;
+    bottom: 20px;
+	}
+}

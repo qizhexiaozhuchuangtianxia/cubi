@@ -1,0 +1,270 @@
+/**
+ * start 分配权限模块的样式代码
+ */
+.setAuthorityClass{
+	width:100%;
+	.authorityGroupListBox{
+		width:100%;
+		padding: 8px 0;
+		.scrollBox{
+			width: 100%;
+			min-height: 70px;
+			.authorityGroupList{
+				padding: 0!important;
+				.authorityBoxs{
+					border-top: rgba(255,255,255,.12) 1px solid;
+					.listItemBox{
+						&:hover{
+							background:rgba(38,50,56,.15)!important;
+						}
+						div{
+							box-sizing:border-box!important;
+							-moz-box-sizing:border-box!important;
+							-webkit-box-sizing:border-box!important;
+							padding: 0!important; 
+						}
+						.listItem{
+							height: 70px;
+							width: 100%;
+							position: relative;
+							&>div{
+								position: absolute;
+								height:70px;
+								line-height: 70px;
+							}
+							.leftIcon{
+								left:24px;
+								.authorityIconButton{
+									color: rgba(255,255,255,.56)!important;
+								}
+								.selectedColor{
+									color: rgba(0,229,255,1)!important;
+								}
+							}
+							.textBox{
+								left:80px;
+								width:170px;
+								&>div{
+									width:100%;
+									height:20px;
+									line-height: 20px;
+									text-align: left;
+								}
+								.name{
+									margin-top:16px;
+									font-size: 14px!important;
+									color: rgba(255,255,255,.87)!important;
+									overflow: hidden;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									&.selectedColor{
+										color: rgba(0,229,255,1)!important;
+									}
+								}
+								.authority{
+									font-size: 12px;
+									color: rgba(255,255,255,.54)!important;
+									&.selectedColor{
+										color: rgba(0,229,255,.87)!important;
+									}
+								}
+								&:hover{
+									.name{
+										color: rgba(0,229,255,1)!important;
+									}
+									.authority{
+										color: rgba(0,229,255,.87)!important;
+									}
+								}
+							}
+							.rightIcon{
+								right: 24px;
+								.deleteIconButton{
+									position: absolute!important;
+									right: 48px;
+									color: rgba(255,255,255,.87)!important;
+									display: none!important;
+								}
+								.icon-icxiangxiazhankai24px{
+									color: rgba(255,255,255,.87)!important;
+								} 
+								.iconRotate{
+									transform:rotate(180deg);
+									-ms-transform:rotate(180deg);
+									-moz-transform:rotate(180deg);
+									-webkit-transform:rotate(180deg);
+									-o-transform:rotate(180deg);
+								}
+							}
+							&:hover{
+								color: rgba(0,229,255,.87)!important;
+								.authorityIconButton{
+									color: rgba(0,229,255,.87)!important;
+								}
+								.name{
+									color: rgba(0,229,255,1)!important;
+								}
+								.authority{
+									color: rgba(0,229,255,.87)!important;
+								}
+								.deleteIconButton{
+									display: block!important;
+								}
+							}
+						}
+					}
+					.selectedBox{
+						width: 100%;
+						display: none;
+						.itemSeleted{
+							color: rgba(0,229,255,.87)!important;
+						}
+						&>div>span.selecteItemBox{
+							&:hover{
+								background:rgba(38,50,56,.15)!important;
+							}
+							div{
+								box-sizing:border-box!important;
+								-moz-box-sizing:border-box!important;
+								-webkit-box-sizing:border-box!important;
+								padding: 0!important; 
+							}
+							.seleteItem{
+								height:60px;
+								&>div{
+									position: absolute;	
+								}
+								.seleteIcon{
+									top:0;
+									left:24px;
+									height: 100%;
+									display: none;
+									.iconButton{
+										color: rgba(0,229,255,.87)!important;
+										top: 22px!important;
+									}
+								}
+								.itemSeleted{
+									display: block;
+								}
+								.seleteText{
+									left: 80px;
+									width: 260px;
+									height: 60px;
+									line-height: 60px;
+									font-size: 14px!important;
+								}
+								.seletedText{
+									color: rgba(0,229,255,.87)!important;
+								}
+							}
+							&:hover{
+								.seleteText{
+									color: rgba(0,229,255,.87)!important;
+								}
+							}
+						}
+					}
+					.selectedBg{
+						background:rgba(55,71,79,1);
+					}
+				}
+			}
+			.addGroupClass{
+				padding-top: 0!important;
+				&>div{
+					&>span{
+						&:hover{
+							background:rgba(38,50,56,.15)!important;
+						}
+						&>div>div{
+							padding: 0!important;
+							width: 100%!important;
+							height: 48px!important;
+							position: relative;
+							&>span.addIconButton{
+								width: 24px!important;
+								height: 48px!important;
+								line-height: 48px!important;
+								margin: 0!important;
+								padding: 0!important;
+								color: rgba(255,255,255,.56)!important;
+								left:24px!important;
+							}
+							&>div{
+								color: rgba(255,255,255,.87)!important;
+								font-size: 14px!important;
+								position: absolute;
+								left: 80px;
+								height: 48px!important;
+								line-height: 48px!important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.addGroupListBox{
+		width:100%;
+		padding: 8px 0;
+		.scrollBox{
+			width: 100%;
+			min-height: 70px;
+			&>div{
+				&>div{
+					&>div{
+						padding-top: 0!important;
+						&>div{
+							span.listItemClass{
+								&:hover{
+									background:rgba(38,50,56,.15)!important;
+								}
+								&>div>div{
+									padding: 0!important;
+									width: 100%!important;
+									height: 48px!important;
+									position: relative;
+									&>span.addIconButton{
+
+										width: 24px!important;
+										height: 48px!important;
+										line-height: 48px!important;
+										margin: 0!important;
+										padding: 0!important;
+										color: rgba(255,255,255,.56)!important;
+										left:24px!important;
+									}
+									&>div{
+										width: 270px;
+										overflow: hidden;
+										text-overflow: ellipsis;
+										white-space: nowrap;
+										color: rgba(255,255,255,.87)!important;
+										font-size: 14px!important;
+										position: absolute;
+										left: 80px;
+										height: 48px!important;
+										line-height: 48px!important;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.nullMessageBox{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: -36px;
+		margin-top: -8px;
+		color: #fff;
+		font-size: 16px;
+	}
+}
+ /**
+ * end 分配权限模块的样式代码
+ */
